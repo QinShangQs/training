@@ -1,0 +1,174 @@
+.container {
+	/* defaults for resposive height container */
+	position: relative;
+	width: 100%;
+	height: 0;
+	
+	/* 39% being the ratio we are maintaining 
+	 * calculated by looking at the image 
+	 * ratio: 400/1024 = ~0.39 */
+	padding: 0 0 39% 0;
+}
+
+.iosSlider {
+	width: 100%;
+	background: #000;
+	/* this height ends up being your maximum height, 
+	 * if you want it to scale forever, set it to 
+	 * a very high number */
+	height: 1500px;
+}
+
+.iosSlider .slider {
+	width: 100%;
+	height: 100%;
+}
+
+.iosSlider .slider .item {
+	float: left;
+	
+	width: 100%;
+}
+
+.iosSlider .slider .item img {
+	width: 100%;
+	height: auto;
+}
+
+/* controls */
+.container .prevContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+	
+	padding: 0 0 19.5% 0;
+	z-index: 10;
+}
+
+.container .prevContainer .prev {
+	position: absolute;
+	bottom: -10%;
+	left: 20px;
+	width: 41px;
+	height: 64px;
+	background: url(../images/left_btn.png) 0 0 no-repeat;
+}
+
+.container .nextContainer {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100px;
+	
+	padding: 0 0 19.5% 0;
+	z-index: 10;
+}
+
+.container .nextContainer .next {
+	position: absolute;
+	bottom: -10%;
+	right: 20px;
+	width: 41px;
+	height: 64px;
+	background: url(../images/right_btn.png) 0 0 no-repeat;
+}
+
+.container .selectorsBlock {
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+	height: 5%;
+}
+
+.container .selectorsBlock .selectors {
+	position: relative;
+	top: 0;
+	left: 0;
+	margin: 0 auto;
+	width: 14%;
+	height: 100%;
+}
+
+.container .selectorsBlock .selectors .item {
+	position: relative;
+	top: 0;
+	left: 0;
+	float: left;
+	width: 25px;
+	height: 25px;
+	margin: 0 0 0 5%;
+	background: url(../images/item_pot.png) 0 0 no-repeat;
+}
+
+.container .selectorsBlock .selectors .selected {
+	background: url(../images/selected_pot.png) 0 0 no-repeat;
+	top:-3px;
+}
+
+.container .selectorsBlock .selectors .first {
+	margin-left: 0;
+}
+
+
+
+.course-box{width:1000px;margin:20px auto;}
+.course-box .title{width:313px;height:59px;background: url(../images/kecheng_intro.png) 0 0 no-repeat;margin-left: 20px;margin-bottom:34px;margin-top:65px;}
+.course-box .course-wrap{width:468px;}
+.course-box .course{position:relative;width:468px;height:216px;background: #535353;border:3px solid #FFF;box-shadow: 2px 2px 3px #C1C1C1;}
+.course-box .course-wrap.mr{margin-right:52px;}
+.course-title{color:#FFF;font-size:2em;}
+.course-box .popup{width:223px;height: 88px;margin:68px auto;}
+.course-box .course-title{font-size: 2em;height:30px;line-height: 30px;border-bottom: 1px dashed #FFF;margin-bottom:10px;padding-bottom: 10px}
+.course-box .sub-title p{color:#FFF;font-size:1.5em;margin:9px 0 0 5px;}
+.course-box .sub-title a{display:block;width:117px;height:34px;font-size:1.5em;line-height: 34px;text-align: center;background: rgb(255,127,13);color:#FFF;}
+.intro-box .t{text-align: center;font-size:1.3em;margin-bottom: 15px}
+.intro-box .b{text-align: center;font-size: 1.3em}
+.intro-box .b .del{text-decoration:line-through;color:#A2A2A2;margin-right:15px;}
+.intro-box .b .act{text-align: center;}
+.intro-box .b em{color:rgb(255,127,13);}
+.intro-box{margin-bottom:40px;margin-top:20px;}
+.teach-box{width:1000px;margin:30px auto;}
+.teach-box .title{font-size:1.3em;text-align: center;border-bottom: 1px solid #bbb;margin:25px 0;padding-bottom:15px;}
+.teach-box .title em{color:rgb(255,127,13);font-size: 2.0em}
+.list-box{padding: 40px 0}
+.list-box .sub-title{font-size:2em;margin-bottom: 20px }
+.list-box.fir{border-bottom: 1px solid #D8D8D8}
+.list-box li{float: left;margin-right:52px;}
+.list-box li.last{margin-right:0;}
+.list-box li img{width:138px;margin-right:20px;}
+.list-box li p{margin-bottom: 15px;font-size:1.3em;}
+.list-box .name{font-size: 1.6em}
+.list-box .fr{margin-top:20px;}
+.kaike-box{width:1000px;margin:40px auto;}
+.kaike-box .title{width:313px;height:59px;background: url(../images/kaike.png) 0 0 no-repeat;margin-left: 20px;margin-bottom:34px;margin-top:65px;}
+.kaike-box table{width:100%;background-color: transparent;border-spacing: 0;border-collapse: collapse;border:1px solid #ddd;}
+.kaike-box thead{background: #ddd;color:#535353;height:45px;}
+.kaike-box thead tr th {width:33.33%;vertical-align: middle;height: 45px;line-height: 45px;text-align: center;box-sizing: border-box;border-right:1px solid #bbb;font-size:1.3em;}
+.kaike-box thead tr th:last-child{border:0;}
+.kaike-box table tbody tr td{width:33.33%;vertical-align: middle;height: 45px;line-height: 45px;text-align: center;font-size: 1.2em}
+.kaike-box table tbody tr td a{padding:7px 20px;color:#FFF;text-align: center;border-radius: 5px;background: rgb(5,205,80);}
+.outline-box{width: 1000px;margin:20px auto 80px;}
+.outline-box .tab{width:558px;height:64px;margin:20px auto;}
+.outline-box .tab p{width:50%;height:64px;line-height:64px;text-align: center;background: #ddd;font-size: 2em;-webkit-box-shadow:1px 1px 3px #BFBFBF inset;           
+    box-shadow:1px 1px 3px #BFBFBF inset;; }
+.outline-box .tab p.active{background: rgb(255,127,13);color:#FFF;box-shadow: none;}
+.outline-box .notice{text-align: center;color: #bbb;margin-bottom: 20px;font-size: 1.3em}
+.outline-box .cf{background: #FFF}
+.outline-box ul{width: 495px;min-height:50px;background: #ddd;margin-bottom: 10px }
+.outline-box ul:nth-child(odd){margin-right:10px}
+.outline-box ul li{margin:0px 0 10px 5px;font-size: 1.3em }
+.outline-box ul li.title{font-size: 1.4em;margin-top:10px;}
+.outline-box ul.mt0{margin-bottom: 0}
+.footer{width:100%;height:244px;background: #000}
+.footer .line{width:100%;height:10px;background:rgb(255,127,13);}
+.footer .inner{width: 1000px;margin:50px auto 0;color:#FFF;font-size: 1.5em}
+.footer .left{}
+.footer .contact{margin-bottom: 20px;}
+.footer .method span{margin-right: 30px}
+.footer .about{margin: 50px 0 20px 0;color:rgb(255,127,13);}
+.footer .copyright{text-align: center;font-size: 14px;color:#bbb;}
+.qq-box{width:200px;position: fixed;right:0;top:20%;z-index: 999}
+.qq-box .qq{width: 100%;height: 174px;background: url(../images/qq1.png) 0 0 no-repeat;}
+.qq-box .qq a{position:absolute;width:106px;height:31px;top:137px;left:54px;background: url(../images/qq2.png) no-repeat 0 0;}
+.qq-box .phone{width:200px;height:340px;background: url(../images/phone.png) 0 0 no-repeat;}
