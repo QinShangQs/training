@@ -83,81 +83,58 @@
 		<div class="course-box">
 			<div class="title"></div>
 			<div class="course-line cf">
-				<div class="fl course-wrap mr">
+				<foreach name="productMajors" item="i" key="k">
+				<if condition="$k eq 0">
+						<div class="fl course-wrap mr">
+				<else /> 
+						<div class="fl course-wrap ">
+				</if>
+		
 					<div class="course">
 						<div class="popup">
-							<p class="course-title">产品经理</p>
+							<p class="course-title">{$i.name}</p>
 							<div class="cf sub-title">
-								<p class="fl">周末班</p>
-								<a href="" class="fr">查看课程</a>
+								<p class="fl">{$i.type_name}</p>
+								<a href="#pro" onclick="$('#pro').click()" class="fr">查看课程</a>
 							</div>
 						</div>
 					</div>
 					<div class="intro-box">
-						<p class="t">周六或周日上课，每节课4小时，一共1周</p>
+						<p class="t">{$i.descs}</p>
 						<p class="b">
-							<span class="del">原价：3999元</span><span class="act">活动优惠价：<em>2999元</em></span>
+							<span class="del">原价：{$i.old_price}元</span><span class="act">活动优惠价：<em>{$i.price}元</em></span>
 						</p>
 					</div>
 				</div>
-
-				<div class="fl course-wrap">
-					<div class="course">
-						<div class="popup">
-							<p class="course-title">产品经理</p>
-							<div class="cf sub-title">
-								<p class="fl">周末班</p>
-								<a href="" class="fr">查看课程</a>
-							</div>
-						</div>
-					</div>
-					<div class="intro-box">
-						<p class="t">周六或周日上课，每节课4小时，一共1周</p>
-						<p class="b">
-							<span class="del">原价：3999元</span><span class="act">活动优惠价：<em>2999元</em></span>
-						</p>
-					</div>
-				</div>
-
+				</foreach>
+				
 			</div>
 
 			<div class="course-line cf">
-				<div class="fl course-wrap mr">
+				<foreach name="uiMajors" item="i" key="k">
+				<if condition="$k eq 0">
+						<div class="fl course-wrap mr">
+				<else /> 
+						<div class="fl course-wrap ">
+				</if>
+		
 					<div class="course">
 						<div class="popup">
-							<p class="course-title">产品经理</p>
+							<p class="course-title">{$i.name}</p>
 							<div class="cf sub-title">
-								<p class="fl">周末班</p>
-								<a href="" class="fr">查看课程</a>
+								<p class="fl">{$i.type_name}</p>
+								<a href="#ui" onclick="$('#ui').click()" class="fr">查看课程</a>
 							</div>
 						</div>
 					</div>
 					<div class="intro-box">
-						<p class="t">周六或周日上课，每节课4小时，一共1周</p>
+						<p class="t">{$i.descs}</p>
 						<p class="b">
-							<span class="del">原价：3999元</span><span class="act">活动优惠价：<em>2999元</em></span>
+							<span class="del">原价：{$i.old_price}元</span><span class="act">活动优惠价：<em>{$i.price}元</em></span>
 						</p>
 					</div>
 				</div>
-
-				<div class="fl course-wrap">
-					<div class="course">
-						<div class="popup">
-							<p class="course-title">产品经理</p>
-							<div class="cf sub-title">
-								<p class="fl">周末班</p>
-								<a href="" class="fr">查看课程</a>
-							</div>
-						</div>
-					</div>
-					<div class="intro-box">
-						<p class="t">周六或周日上课，每节课4小时，一共1周</p>
-						<p class="b">
-							<span class="del">原价：3999元</span><span class="act">活动优惠价：<em>2999元</em></span>
-						</p>
-					</div>
-				</div>
-
+				</foreach>
 			</div>
 		</div>
 
@@ -168,55 +145,41 @@
 			<div class="list-box fir">
 				<p class="sub-title">产品经理讲师</p>
 				<ul class="cf">
-					<li><img src="__PUBLIC__/kecheng/images/friends.png"
-						class="fl">
+					<foreach name="productTeachers" item="i" key="k">
+					<li>
+						<empty name="i.header_image">
+							<img src="__PUBLIC__/kecheng/images/friends.png" class="fl">
+						<else /> 
+							<img src="{$i.header_image}" class="fl">
+						</empty> 
 						<div class="fr">
-							<p class="name">非凡老师</p>
-							<p class="from">来自：百度</p>
-							<p class="">职称：高级产品经理</p>
-						</div></li>
-					<li><img src="__PUBLIC__/kecheng/images/friends.png"
-						class="fl">
-						<div class="fr">
-							<p class="name">非凡老师</p>
-							<p class="from">来自：百度</p>
-							<p class="">职称：高级产品经理</p>
-						</div></li>
-					<li class="last"><img
-						src="__PUBLIC__/kecheng/images/friends.png" class="fl">
-						<div class="fr">
-							<p class="name">非凡老师</p>
-							<p class="from">来自：百度</p>
-							<p class="">职称：高级产品经理</p>
-						</div></li>
-
+							<p class="name">{$i.name}</p>
+							<p class="from">来自：{$i.come}</p>
+							<p class="">职称：{$i.degree}</p>
+						</div>
+					</li>
+					</foreach>
+					
 				</ul>
 			</div>
 
 			<div class="list-box">
 				<p class="sub-title">UI讲师</p>
 				<ul class="cf">
-					<li><img src="__PUBLIC__/kecheng/images/friends.png"
-						class="fl">
+					<foreach name="uiTeachers" item="i" key="k">
+					<li>
+						<empty name="i.header_image">
+							<img src="__PUBLIC__/kecheng/images/friends.png" class="fl">
+						<else /> 
+							<img src="{$i.header_image}" class="fl">
+						</empty> 
 						<div class="fr">
-							<p class="name">非凡老师</p>
-							<p class="from">来自：百度</p>
-							<p class="">职称：高级产品经理</p>
-						</div></li>
-					<li><img src="__PUBLIC__/kecheng/images/friends.png"
-						class="fl">
-						<div class="fr">
-							<p class="name">非凡老师</p>
-							<p class="from">来自：百度</p>
-							<p class="">职称：高级产品经理</p>
-						</div></li>
-					<li class="last"><img
-						src="__PUBLIC__/kecheng/images/friends.png" class="fl">
-						<div class="fr">
-							<p class="name">非凡老师</p>
-							<p class="from">来自：百度</p>
-							<p class="">职称：高级产品经理</p>
-						</div></li>
+							<p class="name">{$i.name}</p>
+							<p class="from">来自：{$i.come}</p>
+							<p class="">职称：{$i.degree}</p>
+						</div>
+					</li>
+					</foreach>
 
 				</ul>
 			</div>

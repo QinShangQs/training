@@ -123,3 +123,759 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002669s ]
 INFO: [ app_end ] --END-- [ RunTime:0.006615s ]
 
+[ 2016-02-16T15:46:18+08:00 ] 127.0.0.1 /training/training/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000687s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005799s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002854s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007303s ]
+SQL: SHOW COLUMNS FROM `tt_gallery` [ RunTime:0.0093s ]
+SQL: SHOW COLUMNS FROM `tt_profile_item` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `tt_gallery`  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002372s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006436s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.193540s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.197555s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002298s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006792s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006700s ]
+
+[ 2016-02-16T15:46:29+08:00 ] 127.0.0.1 /training/training/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000682s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002404s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006910s ]
+SQL: SHOW COLUMNS FROM `tt_gallery` [ RunTime:0.0093s ]
+SQL: SHOW COLUMNS FROM `tt_profile_item` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `tt_gallery`  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006005s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.180087s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.184054s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002529s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006937s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002453s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006475s ]
+
+[ 2016-02-16T15:46:59+08:00 ] 127.0.0.1 /training/training/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000683s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005838s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003083s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007481s ]
+SQL: SHOW COLUMNS FROM `tt_gallery` [ RunTime:0.0096s ]
+SQL: SHOW COLUMNS FROM `tt_profile_item` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `tt_gallery`  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 2  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002408s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006590s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.178269s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.182247s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002238s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006456s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002705s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007038s ]
+
+[ 2016-02-16T15:50:50+08:00 ] 127.0.0.1 /training/training/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000760s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005862s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002875s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007114s ]
+SQL: SHOW COLUMNS FROM `tt_gallery` [ RunTime:0.0096s ]
+SQL: SHOW COLUMNS FROM `tt_profile_item` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `tt_gallery`  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 2  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006407s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.176588s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.180588s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002989s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007182s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002712s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007232s ]
+
+[ 2016-02-16T16:45:16+08:00 ] 127.0.0.1 /training/training/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006758s ]
+SQL: SHOW COLUMNS FROM `tt_gallery` [ RunTime:0.0137s ]
+SQL: SHOW COLUMNS FROM `tt_profile_item` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `tt_major` [ RunTime:0.0202s ]
+SQL: SELECT * FROM `tt_gallery`  [ RunTime:0.0016s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 2  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0016s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 2  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006380s ]
+NOTIC: [8] Undefined index: name E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 83 行.
+NOTIC: [8] Undefined index: type_name E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 85 行.
+NOTIC: [8] Undefined index: descs E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 91 行.
+NOTIC: [8] Undefined index: old_price E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 93 行.
+NOTIC: [8] Undefined index: price E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 93 行.
+NOTIC: [8] Undefined index: name E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 83 行.
+NOTIC: [8] Undefined index: type_name E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 85 行.
+NOTIC: [8] Undefined index: descs E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 91 行.
+NOTIC: [8] Undefined index: old_price E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 93 行.
+NOTIC: [8] Undefined index: price E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 93 行.
+NOTIC: [8] Undefined index: name E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 83 行.
+NOTIC: [8] Undefined index: type_name E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 85 行.
+NOTIC: [8] Undefined index: descs E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 91 行.
+NOTIC: [8] Undefined index: old_price E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 93 行.
+NOTIC: [8] Undefined index: price E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 93 行.
+NOTIC: [8] Undefined index: name E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 83 行.
+NOTIC: [8] Undefined index: type_name E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 85 行.
+NOTIC: [8] Undefined index: descs E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 91 行.
+NOTIC: [8] Undefined index: old_price E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 93 行.
+NOTIC: [8] Undefined index: price E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 93 行.
+NOTIC: [8] Undefined index: name E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 83 行.
+NOTIC: [8] Undefined index: type_name E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 85 行.
+NOTIC: [8] Undefined index: descs E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 91 行.
+NOTIC: [8] Undefined index: old_price E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 93 行.
+NOTIC: [8] Undefined index: price E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 93 行.
+NOTIC: [8] Undefined index: name E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 83 行.
+NOTIC: [8] Undefined index: type_name E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 85 行.
+NOTIC: [8] Undefined index: descs E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 91 行.
+NOTIC: [8] Undefined index: old_price E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 93 行.
+NOTIC: [8] Undefined index: price E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 93 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.308801s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.312842s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002283s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006260s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002687s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006756s ]
+
+[ 2016-02-16T16:45:48+08:00 ] 127.0.0.1 /training/training/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000746s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005498s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006305s ]
+SQL: SHOW COLUMNS FROM `tt_gallery` [ RunTime:0.0095s ]
+SQL: SHOW COLUMNS FROM `tt_profile_item` [ RunTime:0.0098s ]
+SQL: SHOW COLUMNS FROM `tt_major` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `tt_gallery`  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 2  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 2  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003008s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.007509s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.279999s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.285803s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002355s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006896s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002573s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006733s ]
+
+[ 2016-02-16T16:46:21+08:00 ] 127.0.0.1 /training/training/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001352s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006410s ]
+SQL: SHOW COLUMNS FROM `tt_gallery` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `tt_profile_item` [ RunTime:0.0099s ]
+SQL: SHOW COLUMNS FROM `tt_major` [ RunTime:0.0106s ]
+SQL: SELECT * FROM `tt_gallery`  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 2  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 2  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002219s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006744s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.271987s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.277310s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002350s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007407s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002444s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006964s ]
+
+[ 2016-02-16T16:47:06+08:00 ] 127.0.0.1 /training/training/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000679s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005209s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006521s ]
+SQL: SHOW COLUMNS FROM `tt_gallery` [ RunTime:0.0098s ]
+SQL: SHOW COLUMNS FROM `tt_profile_item` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `tt_major` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `tt_gallery`  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 2  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 2  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004145s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.012153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.362198s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.367962s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004528s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002598s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010137s ]
+
+[ 2016-02-16T16:48:30+08:00 ] 127.0.0.1 /training/training/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000675s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005398s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006382s ]
+SQL: SHOW COLUMNS FROM `tt_gallery` [ RunTime:0.0101s ]
+SQL: SHOW COLUMNS FROM `tt_profile_item` [ RunTime:0.0101s ]
+SQL: SHOW COLUMNS FROM `tt_major` [ RunTime:0.0106s ]
+SQL: SELECT * FROM `tt_gallery`  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 2  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 2  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006029s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.226459s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.230422s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002250s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006162s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002538s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006759s ]
+
+[ 2016-02-16T16:49:33+08:00 ] 127.0.0.1 /training/training/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000721s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006406s ]
+SQL: SHOW COLUMNS FROM `tt_gallery` [ RunTime:0.0101s ]
+SQL: SHOW COLUMNS FROM `tt_profile_item` [ RunTime:0.0091s ]
+SQL: SHOW COLUMNS FROM `tt_major` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `tt_gallery`  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 2  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 1  [ RunTime:0.0012s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 2  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003480s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010654s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.314459s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.320631s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002625s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008369s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009351s ]
+
+[ 2016-02-16T16:49:58+08:00 ] 127.0.0.1 /training/training/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000833s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007363s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004209s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012088s ]
+SQL: SHOW COLUMNS FROM `tt_gallery` [ RunTime:0.0127s ]
+SQL: SHOW COLUMNS FROM `tt_profile_item` [ RunTime:0.0124s ]
+SQL: SHOW COLUMNS FROM `tt_major` [ RunTime:0.0143s ]
+SQL: SELECT * FROM `tt_gallery`  [ RunTime:0.0016s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 2  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 2  [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006051s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.303008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.308328s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002327s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006473s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002525s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006505s ]
+
+[ 2016-02-16T16:50:29+08:00 ] 127.0.0.1 /training/training/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001366s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008183s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005153s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012649s ]
+SQL: SHOW COLUMNS FROM `tt_gallery` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `tt_profile_item` [ RunTime:0.0176s ]
+SQL: SHOW COLUMNS FROM `tt_major` [ RunTime:0.0138s ]
+SQL: SELECT * FROM `tt_gallery`  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0012s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 2  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 2  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002025s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.005975s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.271466s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.275534s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002254s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006545s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002437s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006535s ]
+
+[ 2016-02-16T16:50:46+08:00 ] 127.0.0.1 /training/training/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000692s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005639s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002943s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007179s ]
+SQL: SHOW COLUMNS FROM `tt_gallery` [ RunTime:0.0125s ]
+SQL: SHOW COLUMNS FROM `tt_profile_item` [ RunTime:0.0495s ]
+SQL: SHOW COLUMNS FROM `tt_major` [ RunTime:0.0163s ]
+SQL: SELECT * FROM `tt_gallery`  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0012s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 2  [ RunTime:0.0015s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 1  [ RunTime:0.0013s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 2  [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006157s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.313361s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.320213s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002280s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006191s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002485s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006771s ]
+
+[ 2016-02-16T16:51:41+08:00 ] 127.0.0.1 /training/training/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000674s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005117s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002467s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006502s ]
+SQL: SHOW COLUMNS FROM `tt_gallery` [ RunTime:0.0097s ]
+SQL: SHOW COLUMNS FROM `tt_profile_item` [ RunTime:0.0092s ]
+SQL: SHOW COLUMNS FROM `tt_major` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `tt_gallery`  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 2  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 1  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 2  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002212s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.007565s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.361004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.365180s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004286s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008813s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004715s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011759s ]
+
+[ 2016-02-16T17:15:27+08:00 ] 127.0.0.1 /training/training/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000685s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.011577s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015838s ]
+SQL: SHOW COLUMNS FROM `tt_gallery` [ RunTime:0.0139s ]
+SQL: SHOW COLUMNS FROM `tt_profile_item` [ RunTime:0.0153s ]
+SQL: SHOW COLUMNS FROM `tt_major` [ RunTime:0.0136s ]
+SQL: SHOW COLUMNS FROM `tt_teacher` [ RunTime:0.0138s ]
+SQL: SELECT * FROM `tt_gallery`  [ RunTime:0.0015s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0013s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 2  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 1  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 2  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_teacher` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_teacher` WHERE `profile_id` = 2  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006345s ]
+NOTIC: [8] Undefined index: header_image E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 135 行.
+NOTIC: [8] Undefined index: come E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 140 行.
+NOTIC: [8] Undefined index: degree E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 141 行.
+NOTIC: [8] Undefined index: header_image E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 135 行.
+NOTIC: [8] Undefined index: come E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 140 行.
+NOTIC: [8] Undefined index: degree E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 141 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.418947s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.423392s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.028380s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.032626s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.021978s ]
+INFO: [ app_end ] --END-- [ RunTime:0.026311s ]
+
+[ 2016-02-16T17:15:33+08:00 ] 127.0.0.1 /training/training/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001380s ]
+INFO: [ app_init ] --END-- [ RunTime:0.009230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006706s ]
+SQL: SHOW COLUMNS FROM `tt_gallery` [ RunTime:0.0105s ]
+SQL: SHOW COLUMNS FROM `tt_profile_item` [ RunTime:0.0093s ]
+SQL: SHOW COLUMNS FROM `tt_major` [ RunTime:0.0125s ]
+SQL: SHOW COLUMNS FROM `tt_teacher` [ RunTime:0.0098s ]
+SQL: SELECT * FROM `tt_gallery`  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 2  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 1  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 2  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_teacher` WHERE `profile_id` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tt_teacher` WHERE `profile_id` = 2  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006001s ]
+NOTIC: [8] Undefined index: header_image E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 135 行.
+NOTIC: [8] Undefined index: come E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 140 行.
+NOTIC: [8] Undefined index: degree E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 141 行.
+NOTIC: [8] Undefined index: header_image E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 135 行.
+NOTIC: [8] Undefined index: come E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 140 行.
+NOTIC: [8] Undefined index: degree E:\WWW\training\training\Apps\Runtime\Cache\Home\400c995c330f1f6ecac6b9102849eb7e.php 第 141 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.367592s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.371712s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002466s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006949s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002421s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006588s ]
+
+[ 2016-02-16T17:15:50+08:00 ] 127.0.0.1 /training/training/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001355s ]
+INFO: [ app_init ] --END-- [ RunTime:0.034667s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009950s ]
+SQL: SHOW COLUMNS FROM `tt_gallery` [ RunTime:0.0153s ]
+SQL: SHOW COLUMNS FROM `tt_profile_item` [ RunTime:0.0109s ]
+SQL: SHOW COLUMNS FROM `tt_major` [ RunTime:0.0137s ]
+SQL: SHOW COLUMNS FROM `tt_teacher` [ RunTime:0.0089s ]
+SQL: SELECT * FROM `tt_gallery`  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 2  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 1  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 2  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_teacher` WHERE `profile_id` = 1  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_teacher` WHERE `profile_id` = 2  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006138s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.355892s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.360557s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002260s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006260s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002493s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007187s ]
+
+[ 2016-02-16T17:16:06+08:00 ] 127.0.0.1 /training/training/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000813s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002975s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007163s ]
+SQL: SHOW COLUMNS FROM `tt_gallery` [ RunTime:0.0105s ]
+SQL: SHOW COLUMNS FROM `tt_profile_item` [ RunTime:0.0097s ]
+SQL: SHOW COLUMNS FROM `tt_major` [ RunTime:0.0121s ]
+SQL: SHOW COLUMNS FROM `tt_teacher` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `tt_gallery`  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 2  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 2  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_teacher` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_teacher` WHERE `profile_id` = 2  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006096s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.403430s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.407776s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002264s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006623s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002462s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006400s ]
+
+[ 2016-02-16T17:16:28+08:00 ] 127.0.0.1 /training/training/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000703s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007209s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007694s ]
+SQL: SHOW COLUMNS FROM `tt_gallery` [ RunTime:0.0092s ]
+SQL: SHOW COLUMNS FROM `tt_profile_item` [ RunTime:0.0102s ]
+SQL: SHOW COLUMNS FROM `tt_major` [ RunTime:0.0102s ]
+SQL: SHOW COLUMNS FROM `tt_teacher` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `tt_gallery`  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 2  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 1  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 2  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_teacher` WHERE `profile_id` = 1  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_teacher` WHERE `profile_id` = 2  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.398212s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.402193s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002222s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006216s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003301s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007281s ]
+
+[ 2016-02-16T17:16:30+08:00 ] 127.0.0.1 /training/training/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000705s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005332s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002807s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007249s ]
+SQL: SHOW COLUMNS FROM `tt_gallery` [ RunTime:0.0095s ]
+SQL: SHOW COLUMNS FROM `tt_profile_item` [ RunTime:0.0128s ]
+SQL: SHOW COLUMNS FROM `tt_major` [ RunTime:0.0241s ]
+SQL: SHOW COLUMNS FROM `tt_teacher` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `tt_gallery`  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 2  [ RunTime:0.0012s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 1  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 2  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tt_teacher` WHERE `profile_id` = 1  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_teacher` WHERE `profile_id` = 2  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006300s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.432139s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.436334s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003310s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008982s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002436s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006388s ]
+
+[ 2016-02-16T17:16:55+08:00 ] 127.0.0.1 /training/training/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001230s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007450s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007230s ]
+SQL: SHOW COLUMNS FROM `tt_gallery` [ RunTime:0.0096s ]
+SQL: SHOW COLUMNS FROM `tt_profile_item` [ RunTime:0.0092s ]
+SQL: SHOW COLUMNS FROM `tt_major` [ RunTime:0.0108s ]
+SQL: SHOW COLUMNS FROM `tt_teacher` [ RunTime:0.0089s ]
+SQL: SELECT * FROM `tt_gallery`  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 2  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 2  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_teacher` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_teacher` WHERE `profile_id` = 2  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 1 E:\WWW\training\training\ThinkPHP\Library\Think\Template.class.php 第 527 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002506s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010210s ]
+
+[ 2016-02-16T17:17:31+08:00 ] 127.0.0.1 /training/training/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000685s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002668s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006852s ]
+SQL: SHOW COLUMNS FROM `tt_gallery` [ RunTime:0.0119s ]
+SQL: SHOW COLUMNS FROM `tt_profile_item` [ RunTime:0.0133s ]
+SQL: SHOW COLUMNS FROM `tt_major` [ RunTime:0.0737s ]
+SQL: SHOW COLUMNS FROM `tt_teacher` [ RunTime:0.0114s ]
+SQL: SELECT * FROM `tt_gallery`  [ RunTime:0.0015s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 2  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 1  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 2  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_teacher` WHERE `profile_id` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tt_teacher` WHERE `profile_id` = 2  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.011666s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.396205s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.402632s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002269s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006208s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002536s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006945s ]
+
+[ 2016-02-16T17:17:45+08:00 ] 127.0.0.1 /training/training/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001342s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010004s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002776s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008268s ]
+SQL: SHOW COLUMNS FROM `tt_gallery` [ RunTime:0.0141s ]
+SQL: SHOW COLUMNS FROM `tt_profile_item` [ RunTime:0.0098s ]
+SQL: SHOW COLUMNS FROM `tt_major` [ RunTime:0.0121s ]
+SQL: SHOW COLUMNS FROM `tt_teacher` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `tt_gallery`  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 2  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 1  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 2  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_teacher` WHERE `profile_id` = 1  [ RunTime:0.0018s ]
+SQL: SELECT * FROM `tt_teacher` WHERE `profile_id` = 2  [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002514s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006973s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.379820s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.384492s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002246s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006431s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002451s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006467s ]
+
+[ 2016-02-16T17:18:20+08:00 ] 127.0.0.1 /training/training/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001511s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008570s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009283s ]
+SQL: SHOW COLUMNS FROM `tt_gallery` [ RunTime:0.0103s ]
+SQL: SHOW COLUMNS FROM `tt_profile_item` [ RunTime:0.0253s ]
+SQL: SHOW COLUMNS FROM `tt_major` [ RunTime:0.0112s ]
+SQL: SHOW COLUMNS FROM `tt_teacher` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `tt_gallery`  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 2  [ RunTime:0.0024s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 1  [ RunTime:0.0014s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 2  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tt_teacher` WHERE `profile_id` = 1  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_teacher` WHERE `profile_id` = 2  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.377521s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.381972s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002214s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006334s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003007s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009005s ]
+
+[ 2016-02-16T17:18:31+08:00 ] 127.0.0.1 /training/training/?
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000702s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005710s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009682s ]
+SQL: SHOW COLUMNS FROM `tt_gallery` [ RunTime:0.0325s ]
+SQL: SHOW COLUMNS FROM `tt_profile_item` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `tt_major` [ RunTime:0.0162s ]
+SQL: SHOW COLUMNS FROM `tt_teacher` [ RunTime:0.0136s ]
+SQL: SELECT * FROM `tt_gallery`  [ RunTime:0.0015s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 1  [ RunTime:0.0015s ]
+SQL: SELECT * FROM `tt_profile_item` WHERE `profile_id` = 2  [ RunTime:0.0016s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 1  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_major` WHERE `profile_id` = 2  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `tt_teacher` WHERE `profile_id` = 1  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tt_teacher` WHERE `profile_id` = 2  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.023462s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.027538s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.412194s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.416641s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002405s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006889s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002783s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007260s ]
+
