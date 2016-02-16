@@ -28,7 +28,12 @@
 					</div>
 					<div class="line cf">
 						<p class="fl">学习课程：</p>
-						<input type="text" class="fl">
+						<select style="width: 196px;height: 32px;font-size: 15px">
+							<option value="0">请选择...</option>
+							<foreach name="lessons_register" item="i">
+							<option value="{$i.id}">{$i.name} - {$i.open_date}</option>
+							</foreach>
+						</select>
 					</div>
 					<div class="line cf">
 						<p class="fl">联系电话：</p>
@@ -196,22 +201,20 @@
 					</tr>
 				</thead>
 				<tbody>
+					<foreach name="lessons" item="i">
 					<tr>
-						<td>产品经理周末班</td>
-						<td>9.9开课</td>
-						<td>已爆满</td>
+						<td>{$i.name}</td>
+						<td>{$i.open_date}开课</td>
+						<td>
+							<if condition="$i.state eq '报名中'">
+								<a href="">我要报名</a>
+							<else /> 
+								{$i.state}
+							</if>						
+						</td>
 					</tr>
-					<tr>
-						<td>产品经理周末班</td>
-						<td>9.9开课</td>
-						<td><a href="">我要报名</a></td>
-					</tr>
-					<tr>
-						<td>产品经理周末班</td>
-						<td>9.9开课</td>
-						<td>已爆满</td>
-					</tr>
-
+					</foreach>
+					
 				</tbody>
 			</table>
 		</div>
