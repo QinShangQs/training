@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="__PUBLIC__/kecheng/css/common.css">
 <link rel="stylesheet" href="__PUBLIC__/kecheng/css/index.css">
 </head>
-<body>
+<body><a id="class"></a>
 	<div class="wrap">
 		<div class="nav-box">
 			<div class="w1000">
@@ -21,14 +21,14 @@
 		<div class='container'>
 			<div class="submit-box">
 				<form action="" method="">
-					<p class="title">报名表</p>
+					<p class="title"><b>报名表</b></p>
 					<div class="line cf">
 						<p class="fl">姓名：</p>
 						<input type="text" class="fl">
 					</div>
 					<div class="line cf">
 						<p class="fl">学习课程：</p>
-						<select style="width: 196px;height: 32px;font-size: 15px">
+						<select  style="width: 196px;height: 32px;font-size: 15px">
 							<option value="0">请选择...</option>
 							<foreach name="lessons_register" item="i">
 							<option value="{$i.id}">{$i.name} - {$i.open_date}</option>
@@ -207,7 +207,7 @@
 						<td>{$i.open_date}开课</td>
 						<td>
 							<if condition="$i.state eq '报名中'">
-								<a href="">我要报名</a>
+								<a href="#class">我要报名</a>
 							<else /> 
 								{$i.state}
 							</if>						

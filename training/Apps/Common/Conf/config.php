@@ -15,7 +15,7 @@ return array(
 				'Admin',
 		),
 		'DEFAULT_MODULE' => 'Home', // 默认模块
-		'URL_MODEL' => 2, // URL模式
+		'URL_MODEL' => 1, // URL模式
 		'URL_CASE_INSENSITIVE'=>true,
 		
 		//自定义配置项

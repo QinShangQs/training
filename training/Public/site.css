@@ -1,0 +1,26 @@
+@CHARSET "UTF-8";
+
+a {
+	color: gray;
+	outline: none;
+	padding-left: 3px;
+	padding-right: 3px;
+	text-decoration: underline;
+}
+
+a:link, a:visited, a:active, a:hover {
+	color: #333;
+}
+
+a:hover {
+	background-color: #c7d1d6;
+}
+
+input, textarea {
+    border: 1px solid #e2e2e2;
+    background: #fff;
+    color: #333;
+    font-size: 1.2em;
+    margin: 5px 0 6px 0;
+    padding: 5px;
+}

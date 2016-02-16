@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>主页</title>
+<link href="__PUBLIC__/jqueryeasyui/themes/default/easyui.css" rel="stylesheet">
+<link href="__PUBLIC__/jqueryeasyui/themes/icon.css" rel="stylesheet"	type="text/css">
+<link href="__PUBLIC__/site.css" rel="stylesheet"	type="text/css">
+<link href="__PUBLIC__/admin.css" rel="stylesheet"	type="text/css">
+<script src="__PUBLIC__/jquery-1.7.1.min.js"></script>
+<script src="__PUBLIC__/jqueryeasyui/jquery.easyui.min.js"></script>
+<style type="text/css">
+.menu_item {
+	cursor: pointer;
+	padding: 5px;
+	background: #fafafa;
+	border-bottom: 1px dashed gray;
+	color: gray
+}
+</style>
+</head>
+<body>
+    <h1>{$username}</h1>
+    <p>欢迎您登录酷壳助手管理后台 <a href="{:U('Index/logout')}"	style="text-decoration: none">退出</a></p>
+    
+    <div class="easyui-panel" style="padding:5px;">
+        <a href="#" onclick="changeUrl(this,'{:U('Main/first')}')" class="easyui-linkbutton" data-options="plain:true">首页</a>
+        <a href="#" class="easyui-menubutton" data-options="menu:'#mm1'">首页设置</a>
+        <a href="#" class="easyui-menubutton" data-options="menu:'#mm2'">课程管理</a>
+        <a href="#" class="easyui-menubutton" data-options="menu:'#mm3'">报名管理</a>
+    </div>
+    <div id="mm1" style="width:100px;">
+    	<div><a href="#" onclick="changeUrl(this,'{:U('App/create')}')">轮播图</a></div>
+    </div>
+    <div id="mm2" style="width:100px;">
+        <div><a href="#" onclick="changeUrl(this,'{:U('Feedback/index')}')">课程大纲</a></div>
+        <div><a href="#" onclick="changeUrl(this,'{:U('Feedback/index')}')">课程列表</a></div>
+    </div>
+    <div id="mm3" style="width:100px;">
+        <div><a href="#" onclick="changeUrl(this,'{:U('FirstGallery/index')}')">报名列表</a></div>
+        <div><a href="#" onclick="changeUrl(this,'{:U('FirstGallery/index')}')">讲师申请列表</a></div>
+    </div>
+    
+    <div style="margin:20px 0 10px 0;"></div>
+    <div class="easyui-tabs" style="width:99%;height:auto">
+        <div title="首页" style="padding:10px">
+					<iframe id="ifr" src="{:U('Main/first')}" width="100%" height='700' frameborder='0'></iframe>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.menu_item').mouseover(function() {
+			$(this).css('color', 'red');
+		}).mouseout(function() {
+			$(this).css('color', 'black');
+		});
+	});
+
+	/**
+	设置主页上的title
+	 */
+	function setMainTitle(title) {
+		$(".layout-panel-center .panel-header .panel-title").text(title);
+	}
+
+	function changeUrl(a, url) {
+		$.getJSON("{:U('index/ajaxCheckLogin')}", {
+			random : Math.random()
+		}, function(j) {
+			if (!j.success) {
+				$.messager.alert('提示', '您尚未登录请登录！', 'info', function() {
+					location.href = "{:U('/L6gtabfw')}";
+				});
+			} else {
+				$('.tabs-first .tabs-title').text($(a).text());
+				$("#ifr").attr("src", url);
+			}
+		});
+	}
+</script>
+</html>

@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+
+body {margin:28px}
+body,td,th {font-family:Arial,'微软雅黑'; font-size:14px;	line-height:20px}
+a:link{text-decoration:none;}
+a:visited{text-decoration:none;}	
+a:hover{color:#e80509;text-decoration:none;}
+a:active{color:#e80509;text-decoration:none;}
+
+.table_border {
+	border: solid 1px #B4B4B4;
+	border-collapse: collapse;
+}
+
+.table_border tr th {
+	padding-left: 10px;
+	border: solid 1px #B4B4B4;
+	width:inherit;
+	text-align:left;
+}
+
+.table_border tr td {
+	padding-left: 10px;
+	border: solid 1px #B4B4B4;
+}

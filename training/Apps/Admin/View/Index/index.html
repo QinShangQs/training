@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>登录</title>
+
+<link href="__PUBLIC__/jqueryeasyui/themes/default/easyui.css"
+	rel="stylesheet">
+<link href="__PUBLIC__/jqueryeasyui/themes/icon.css" rel="stylesheet"
+	type="text/css">
+<script src="__PUBLIC__/jquery-1.7.1.min.js"></script>
+<script src="__PUBLIC__/jqueryeasyui/jquery.easyui.min.js"></script>
+<script src="__PUBLIC__/jqueryeasyui/locale/easyui-lang-zh_CN.js"></script>
+</head>
+<body>
+
+	<center style="margin-top: 200px;">
+
+		<form id="form1" action="{:U('login')}" method="post">
+
+			<div class="easyui-panel" title="后台"
+				style="width: 400px; padding: 30px 70px 20px 70px;">
+				<div style="margin-bottom: 10px">
+					<input class="easyui-textbox" name="userName" required=true
+						style="width: 100%; height: 40px; padding: 12px"
+						missingMessage="填写您的账号"
+						data-options="prompt:'您的账号',iconCls:'icon-man',iconWidth:38">
+				</div>
+				<div style="margin-bottom: 20px">
+					<input class="easyui-textbox" name="password" required=true
+						missingMessage="填写您的密码" type="password"
+						style="width: 100%; height: 40px; padding: 12px"
+						data-options="prompt:'***********',iconCls:'icon-lock',iconWidth:38">
+				</div>
+				<div>
+					<a id="login" href="javascript:void(0)" class="easyui-linkbutton"
+						data-options="iconCls:'icon-ok'"
+						style="padding: 5px 0px; width: 100%;"> <span
+						style="font-size: 14px;">登录</span>
+					</a>
+				</div>
+			</div>
+		</form>
+
+	</center>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$("#login").click(function() {
+				if ($("#form1").form('validate')) {
+					document.getElementById("form1").submit();
+				}
+			});
+		});
+	</script>
+</body>
+</html>
