@@ -43,23 +43,11 @@
 			</div>
 			<div class='iosSlider'>
 				<div class='slider'>
-
-					<div class='item'>
-						<img src="__PUBLIC__/kecheng/images/h-slider-1.jpg" />
-					</div>
-					<div class='item'>
-						<img src="__PUBLIC__/kecheng/images/h-slider-1.jpg" />
-					</div>
-					<div class='item'>
-						<img src="__PUBLIC__/kecheng/images/h-slider-1.jpg" />
-					</div>
-					<div class='item'>
-						<img src="__PUBLIC__/kecheng/images/h-slider-1.jpg" />
-					</div>
-					<div class='item'>
-						<img src="__PUBLIC__/kecheng/images/h-slider-1.jpg" />
-					</div>
-
+					<foreach name="galleries" item="i">
+						<div class='item'>
+							<img src="{$i.image_url}" />
+						</div>
+					</foreach>
 				</div>
 
 				<div class='prevContainer'>
@@ -73,11 +61,13 @@
 				<div class='selectorsBlock'>
 
 					<div class='selectors'>
-						<div class='item first selected'></div>
-						<div class='item'></div>
-						<div class='item'></div>
-						<div class='item'></div>
-						<div class='item'></div>
+						<for start="0" end="$galleriesCount">
+							<if condition="$i eq 0">
+								<div class='item first selected'></div>
+							<else /> 
+								<div class='item'></div>
+							</if>
+						</for>
 					</div>
 
 				</div>
@@ -269,58 +259,20 @@
 			</div>
 			<p class="notice">注：根据每个不同，实际课程内容安排老师讲课大纲为主</p>
 			<div class="cf" id="pro_div">
+				<foreach name="productItems" item="i">
 				<ul class="fl">
-					<li class="title">1三点多四点</li>
-					<li>weweww</li>
-					<li>阿萨斯的</li>
+					<li class="title"><b>{$i.title}</b></li>
+					<li>{$i.content}</li>
 				</ul>
-				<ul class="fl">
-					<li class="title">1三点多四点</li>
-					<li>weweww</li>
-				</ul>
-				<ul class="fl">
-					<li class="title">1三点多四点</li>
-					<li>weweww</li>
-				</ul>
-				<ul class="fl">
-					<li class="title">1三点多四点</li>
-					<li>weweww</li>
-				</ul>
-				<ul class="fl mt0">
-					<li class="title">1三点多四点</li>
-					<li>weweww</li>
-				</ul>
-				<ul class="fl mt0">
-					<li class="title">1三点多四点</li>
-					<li>weweww</li>
-				</ul>
+				</foreach>
 			</div>
 			<div class="cf" id="ui_div" style="display:none">
+				<foreach name="uiItems" item="i">
 				<ul class="fl">
-					<li class="title">1ui三点多四点</li>
-					<li>weweww</li>
-					<li>阿萨斯的</li>
+					<li class="title"><b>{$i.title}</b></li>
+					<li>{$i.content}</li>
 				</ul>
-				<ul class="fl">
-					<li class="title">1三点多四点</li>
-					<li>weweww</li>
-				</ul>
-				<ul class="fl">
-					<li class="title">1三点多四点</li>
-					<li>weweww</li>
-				</ul>
-				<ul class="fl">
-					<li class="title">1三点多四点</li>
-					<li>weweww</li>
-				</ul>
-				<ul class="fl mt0">
-					<li class="title">1三点多四点</li>
-					<li>weweww</li>
-				</ul>
-				<ul class="fl mt0">
-					<li class="title">1三点多四点</li>
-					<li>weweww</li>
-				</ul>
+				</foreach>
 			</div>
 		</div>
 		
