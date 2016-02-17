@@ -10,25 +10,30 @@
 <link rel="stylesheet" href="__PUBLIC__/kecheng/css/common.css">
 <link rel="stylesheet" href="__PUBLIC__/kecheng/css/index.css">
 </head>
-<body><a id="class"></a>
+<body>
+	<a id="class"></a>
 	<div class="wrap">
 		<div class="nav-box">
 			<div class="w1000">
-				<img src="" class="fl logo" /> <a href="" class="fr enroll"></a>
+				<img src="" class="fl logo" /> <a
+					href="javascript:EV_modeAlert('envon')" class="fr enroll"></a>
 			</div>
 		</div>
 
 		<div class='container'>
 			<div class="submit-box">
-				<form action="" method="">
-					<p class="title"><b>报名表</b></p>
+				<form action="" method="" onsubmit="return false">
+					<p class="title">
+						<b>报名表</b>
+					</p>
 					<div class="line cf">
 						<p class="fl">姓名：</p>
-						<input type="text" class="fl">
+						<input id="r_name" type="text" class="fl">
 					</div>
 					<div class="line cf">
 						<p class="fl">学习课程：</p>
-						<select  style="width: 196px;height: 32px;font-size: 15px">
+						<select id="r_lesson_id"
+							style="width: 196px; height: 32px; font-size: 15px">
 							<option value="0">请选择...</option>
 							<foreach name="lessons_register" item="i">
 							<option value="{$i.id}">{$i.name} - {$i.open_date}</option>
@@ -37,21 +42,21 @@
 					</div>
 					<div class="line cf">
 						<p class="fl">联系电话：</p>
-						<input type="text" class="fl">
+						<input id="r_mobile" type="text" class="fl">
 					</div>
 					<div class="line cf">
 						<p class="fl">QQ/微信：</p>
-						<input type="text" class="fl">
+						<input id="r_tencent" type="text" class="fl">
 					</div>
-					<button class="submit-btn">提交报名</button>
+					<button id="r_submit" class="submit-btn">提交报名</button>
 				</form>
 			</div>
 			<div class='iosSlider'>
 				<div class='slider'>
 					<foreach name="galleries" item="i">
-						<div class='item'>
-							<img src="{$i.image_url}" />
-						</div>
+					<div class='item'>
+						<img src="{$i.image_url}" />
+					</div>
 					</foreach>
 				</div>
 
@@ -66,13 +71,12 @@
 				<div class='selectorsBlock'>
 
 					<div class='selectors'>
-						<for start="0" end="$galleriesCount">
-							<if condition="$i eq 0">
-								<div class='item first selected'></div>
-							<else /> 
-								<div class='item'></div>
-							</if>
-						</for>
+						<for start="0" end="$galleriesCount"> <if
+							condition="$i eq 0">
+						<div class='item first selected'></div>
+						<else />
+						<div class='item'></div>
+						</if> </for>
 					</div>
 
 				</div>
@@ -88,204 +92,326 @@
 		<div class="course-box">
 			<div class="title"></div>
 			<div class="course-line cf">
-				<foreach name="productMajors" item="i" key="k">
-				<if condition="$k eq 0">
-						<div class="fl course-wrap mr">
-				<else /> 
-						<div class="fl course-wrap ">
+				<foreach name="productMajors" item="i" key="k"> <if
+					condition="$k eq 0">
+				<div class="fl course-wrap mr">
+					<else />
+					<div class="fl course-wrap ">
 				</if>
-		
-					<div class="course">
-						<div class="popup">
-							<p class="course-title">{$i.name}</p>
-							<div class="cf sub-title">
-								<p class="fl">{$i.type_name}</p>
-								<a href="#pro" onclick="$('#pro').click()" class="fr">查看课程</a>
-							</div>
+
+				<div class="course">
+					<div class="popup">
+						<p class="course-title">{$i.name}</p>
+						<div class="cf sub-title">
+							<p class="fl">{$i.type_name}</p>
+							<a href="#pro" onclick="$('#pro').click()" class="fr">查看课程</a>
 						</div>
-					</div>
-					<div class="intro-box">
-						<p class="t">{$i.descs}</p>
-						<p class="b">
-							<span class="del">原价：{$i.old_price}元</span><span class="act">活动优惠价：<em>{$i.price}元</em></span>
-						</p>
 					</div>
 				</div>
-				</foreach>
-				
+				<div class="intro-box">
+					<p class="t">{$i.descs}</p>
+					<p class="b">
+						<span class="del">原价：{$i.old_price}元</span><span class="act">活动优惠价：<em>{$i.price}元</em></span>
+					</p>
+				</div>
 			</div>
+			</foreach>
 
-			<div class="course-line cf">
-				<foreach name="uiMajors" item="i" key="k">
-				<if condition="$k eq 0">
-						<div class="fl course-wrap mr">
-				<else /> 
-						<div class="fl course-wrap ">
-				</if>
-		
-					<div class="course">
-						<div class="popup">
-							<p class="course-title">{$i.name}</p>
-							<div class="cf sub-title">
-								<p class="fl">{$i.type_name}</p>
-								<a href="#ui" onclick="$('#ui').click()" class="fr">查看课程</a>
-							</div>
-						</div>
-					</div>
-					<div class="intro-box">
-						<p class="t">{$i.descs}</p>
-						<p class="b">
-							<span class="del">原价：{$i.old_price}元</span><span class="act">活动优惠价：<em>{$i.price}元</em></span>
-						</p>
+		</div>
+
+		<div class="course-line cf">
+			<foreach name="uiMajors" item="i" key="k"> <if
+				condition="$k eq 0">
+			<div class="fl course-wrap mr">
+				<else />
+				<div class="fl course-wrap ">
+			</if>
+
+			<div class="course">
+				<div class="popup">
+					<p class="course-title">{$i.name}</p>
+					<div class="cf sub-title">
+						<p class="fl">{$i.type_name}</p>
+						<a href="#ui" onclick="$('#ui').click()" class="fr">查看课程</a>
 					</div>
 				</div>
+			</div>
+			<div class="intro-box">
+				<p class="t">{$i.descs}</p>
+				<p class="b">
+					<span class="del">原价：{$i.old_price}元</span><span class="act">活动优惠价：<em>{$i.price}元</em></span>
+				</p>
+			</div>
+		</div>
+		</foreach>
+	</div>
+	</div>
+
+	<div class="teach-box">
+		<div class="title">
+			所有讲师来自<em>BAT</em>等一线企业，负责过<em>亿级产品</em>，有<em>丰富授课经验</em>
+		</div>
+		<div class="list-box fir">
+			<p class="sub-title">产品经理讲师</p>
+			<ul class="cf">
+				<foreach name="productTeachers" item="i" key="k">
+				<li><empty name="i.header_image"> <img
+						src="__PUBLIC__/kecheng/images/friends.png" class="fl"> <else />
+					<img src="{$i.header_image}" class="fl"> </empty>
+					<div class="fr">
+						<p class="name">{$i.name}</p>
+						<p class="from">来自：{$i.come}</p>
+						<p class="">职称：{$i.degree}</p>
+					</div></li>
 				</foreach>
-			</div>
+
+			</ul>
 		</div>
 
-		<div class="teach-box">
-			<div class="title">
-				所有讲师来自<em>BAT</em>等一线企业，负责过<em>亿级产品</em>，有<em>丰富授课经验</em>
-			</div>
-			<div class="list-box fir">
-				<p class="sub-title">产品经理讲师</p>
-				<ul class="cf">
-					<foreach name="productTeachers" item="i" key="k">
-					<li>
-						<empty name="i.header_image">
-							<img src="__PUBLIC__/kecheng/images/friends.png" class="fl">
-						<else /> 
-							<img src="{$i.header_image}" class="fl">
-						</empty> 
-						<div class="fr">
-							<p class="name">{$i.name}</p>
-							<p class="from">来自：{$i.come}</p>
-							<p class="">职称：{$i.degree}</p>
-						</div>
-					</li>
-					</foreach>
-					
-				</ul>
-			</div>
+		<div class="list-box">
+			<p class="sub-title">UI讲师</p>
+			<ul class="cf">
+				<foreach name="uiTeachers" item="i" key="k">
+				<li><empty name="i.header_image"> <img
+						src="__PUBLIC__/kecheng/images/friends.png" class="fl"> <else />
+					<img src="{$i.header_image}" class="fl"> </empty>
+					<div class="fr">
+						<p class="name">{$i.name}</p>
+						<p class="from">来自：{$i.come}</p>
+						<p class="">职称：{$i.degree}</p>
+					</div></li>
+				</foreach>
 
-			<div class="list-box">
-				<p class="sub-title">UI讲师</p>
-				<ul class="cf">
-					<foreach name="uiTeachers" item="i" key="k">
-					<li>
-						<empty name="i.header_image">
-							<img src="__PUBLIC__/kecheng/images/friends.png" class="fl">
-						<else /> 
-							<img src="{$i.header_image}" class="fl">
-						</empty> 
-						<div class="fr">
-							<p class="name">{$i.name}</p>
-							<p class="from">来自：{$i.come}</p>
-							<p class="">职称：{$i.degree}</p>
-						</div>
-					</li>
-					</foreach>
-
-				</ul>
-			</div>
+			</ul>
 		</div>
+	</div>
 
-		<div class="kaike-box">
-			<div class="title"></div>
-			<table>
-				<thead>
-					<tr>
-						<th>学习课程</th>
-						<th>开课时间</th>
-						<th>报名状态</th>
-					</tr>
-				</thead>
-				<tbody>
-					<foreach name="lessons" item="i">
-					<tr>
-						<td>{$i.name}</td>
-						<td>{$i.open_date}开课</td>
-						<td>
-							<if condition="$i.state eq '报名中'">
-								<a href="#class">我要报名</a>
-							<else /> 
-								{$i.state}
-							</if>						
+	<div class="kaike-box">
+		<div class="title"></div>
+		<table>
+			<thead>
+				<tr>
+					<th>学习课程</th>
+					<th>开课时间</th>
+					<th>报名状态</th>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="lessons" item="i">
+				<tr>
+					<td>{$i.name}</td>
+					<td>{$i.open_date}开课</td>
+					<td><if condition="$i.state eq '报名中'"> <a href="#class">我要报名</a>
+						<else /> {$i.state} </if></td>
+				</tr>
+				</foreach>
+
+			</tbody>
+		</table>
+	</div>
+	<div class="outline-box">
+		<div class="cf tab">
+			<p class="fl active" id="pro">产品经理大纲</p>
+			<p class="fr" id="ui">UI课程大纲</p>
+		</div>
+		<p class="notice">注：根据每个不同，实际课程内容安排老师讲课大纲为主</p>
+		<div class="cf" id="pro_div">
+			<foreach name="productItems" item="i">
+			<ul class="fl">
+				<li class="title"><b>{$i.title}</b></li>
+				<li>{$i.content}</li>
+			</ul>
+			</foreach>
+		</div>
+		<div class="cf" id="ui_div" style="display: none">
+			<foreach name="uiItems" item="i">
+			<ul class="fl">
+				<li class="title"><b>{$i.title}</b></li>
+				<li>{$i.content}</li>
+			</ul>
+			</foreach>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="line"></div>
+		<div class="inner">
+			<div class="cf">
+				<div class="fl left">
+					<p class="contact">联系我们</p>
+					<div class="method">
+						<span>QQ:8888</span> <span>QQ:8888</span> <span>QQ:8888</span>
+					</div>
+					<p class="about">关于我们</p>
+				</div>
+				<div class="qr-box fr">
+					<p>扫一扫 关注我们</p>
+					<img src="" />
+				</div>
+			</div>
+			<p class="copyright">版权所有：北京快剑客科技公司 All Right Reserved</p>
+		</div>
+	</div>
+	</div>
+
+	<!-- 下面这个div将会被弹出显示，其内容和样式自行编写 -->
+	<div id="envon"
+		style="width: 300px; height: 240px; background-color: #FFFFFF; border: 1px solid #000000; padding: 20px; overflow: hidden; display: none;">
+		<a href="javascript:EV_closeAlert()" style="float: right;">X</a>
+
+		<form action="" method="" onsubmit="return false" style="">
+			<table align='center' cellspacing='10' cellpadding=10>
+				<tr>
+					<td colspan="2" align="center" style="font-size:18px;font-weight: bold;">
+							申请讲课
 						</td>
-					</tr>
-					</foreach>
-					
-				</tbody>
+				</tr>
+				<tr>
+					<td>姓名：</td>
+					<td><input id="t_name" type="text"
+						style="width: 194px; height: 18px; padding: 2px; font-size: 15px;"></td>
+				</tr>
+				<tr>
+					<td>讲授课程：</td>
+					<td><select id="t_profile_id"
+						style="width: 196px; height: 29px; font-size: 15px">
+							<option value="0">请选择...</option>
+							<option value="1">产品经理</option>
+							<option value="2">UI设计师</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td>联系电话：</td>
+					<td><input id="t_mobile" type="text"
+						style="width: 194px; height: 18px; padding: 2px; font-size: 15px;"></td>
+				</tr>
+				<tr>
+					<td>QQ/微信：</td>
+					<td><input id="t_tencent" type="text"
+						style="width: 194px; height: 18px; padding: 2px; font-size: 15px;"></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><button id="t_submit"
+							class="submit-btn">提交报名</button></td>
+				</tr>
 			</table>
-		</div>
-		<div class="outline-box">
-			<div class="cf tab">
-				<p class="fl active" id="pro">产品经理大纲</p>
-				<p class="fr" id="ui">UI课程大纲</p>
-			</div>
-			<p class="notice">注：根据每个不同，实际课程内容安排老师讲课大纲为主</p>
-			<div class="cf" id="pro_div">
-				<foreach name="productItems" item="i">
-				<ul class="fl">
-					<li class="title"><b>{$i.title}</b></li>
-					<li>{$i.content}</li>
-				</ul>
-				</foreach>
-			</div>
-			<div class="cf" id="ui_div" style="display:none">
-				<foreach name="uiItems" item="i">
-				<ul class="fl">
-					<li class="title"><b>{$i.title}</b></li>
-					<li>{$i.content}</li>
-				</ul>
-				</foreach>
-			</div>
-		</div>
-		
-		<div class="footer">
-			<div class="line"></div>
-			<div class="inner">
-				<div class="cf">
-					<div class="fl left">
-						<p class="contact">联系我们</p>
-						<div class="method">
-							<span>QQ:8888</span> <span>QQ:8888</span> <span>QQ:8888</span>
-						</div>
-						<p class="about">关于我们</p>
-					</div>
-					<div class="qr-box fr">
-						<p>扫一扫 关注我们</p>
-						<img src="" />
-					</div>
-				</div>
-				<p class="copyright">版权所有：北京快剑客科技公司 All Right Reserved</p>
-			</div>
-		</div>
 
+		</form>
 
 	</div>
+
 	<script src="__PUBLIC__/kecheng/js/jquery.js"></script>
+	<script src="__PUBLIC__/common.js"></script>
+	<script src="__PUBLIC__/kecheng/js/win.js"></script>
 	<script src="__PUBLIC__/kecheng/js/jquery.easing.js"></script>
 	<script src="__PUBLIC__/kecheng/js/jquery.iosslider.min.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function(){
-			$("#pro").click(function(){
+		$(document).ready(function() {
+			$("#pro").click(function() {
 				$("#pro").addClass('active');
 				$("#ui").removeClass('active');
-				
+
 				$("#pro_div").show();
 				$("#ui_div").hide();
 			});
-			
-			$("#ui").click(function(){
+
+			$("#ui").click(function() {
 				$("#ui").addClass('active');
 				$("#pro").removeClass('active');
-				
+
 				$("#ui_div").show();
 				$("#pro_div").hide();
 			});
+
+			$("#r_submit").click(function() {
+				var name = $.trim($("#r_name").val());
+				var lesson_id = $.trim($("#r_lesson_id").val());
+				var mobile = $.trim($("#r_mobile").val());
+				var tencent = $.trim($("#r_tencent").val());
+
+				var err = '';
+				if (Utils.isEmpty(name)) {
+					err += '请填写姓名！' + "\n";
+				}
+				if (lesson_id == 0) {
+					err += '请选择课程！' + "\n";
+				}
+				if (Utils.isEmpty(mobile)) {
+					err += '请填写联系方式！' + "\n";
+				}else if (!Utils.isTel(mobile)) {
+					err += '请正确填写联系方式！' + "\n";
+				}
+				if (Utils.isEmpty(tencent)) {
+					err += '请填写QQ或微信！' + "\n";
+				}
+
+				if (err) {
+					alert(err);
+					return;
+				}
+
+				$.getJSON('__URL__/lessonRegister', {
+					name : name,
+					lesson_id : lesson_id,
+					mobile : mobile,
+					tencent : tencent,
+					r : Math.random()
+				}, function(obj) {
+					if (obj.success) {
+						$("#r_name").val('');
+						$("#r_lesson_id").val(0);
+						$("#r_mobile").val('');
+						$("#r_tencent").val('');
+					}
+					alert(obj.message);
+				});
+			});
+			
+			$("#t_submit").click(function() {
+				var name = $.trim($("#t_name").val());
+				var profile_id = $.trim($("#t_profile_id").val());
+				var mobile = $.trim($("#t_mobile").val());
+				var tencent = $.trim($("#t_tencent").val());
+
+				var err = '';
+				if (Utils.isEmpty(name)) {
+					err += '请填写姓名！' + "\n";
+				}
+				if (profile_id == 0) {
+					err += '请选择讲授课程！' + "\n";
+				}
+				if (Utils.isEmpty(mobile)) {
+					err += '请填写联系方式！' + "\n";
+				}else if (!Utils.isTel(mobile)) {
+					err += '请正确填写联系方式！' + "\n";
+				}
+				if (Utils.isEmpty(tencent)) {
+					err += '请填写QQ或微信！' + "\n";
+				}
+
+				if (err) {
+					alert(err);
+					return;
+				}
+
+				$.getJSON('__URL__/applyRegister', {
+					name : name,
+					profile_id : profile_id,
+					mobile : mobile,
+					tencent : tencent,
+					r : Math.random()
+				}, function(obj) {
+					if (obj.success) {
+						$("#t_name").val('');
+						$("#t_profile_id").val(0);
+						$("#t_mobile").val('');
+						$("#t_tencent").val('');
+					}
+					alert(obj.message);
+				});
+			});
 		});
-	
+
 		$(document).ready(function() {
 			$('.iosSlider').iosSlider({
 				snapToChildren : true,
@@ -306,7 +432,6 @@
 			$('.selectors .item:eq(' + (args.currentSlideNumber - 1) + ')')
 					.addClass('selected');
 		}
-	
 	</script>
 </body>
 </html>
