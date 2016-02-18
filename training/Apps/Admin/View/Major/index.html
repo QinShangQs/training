@@ -1,0 +1,86 @@
+<extend name="./template" />
+
+<block name="content">
+<div class="easyui-tabs" style="">
+	<div title="产品经理" style="padding: 10px">
+		
+			<foreach name="productMajors" item="i" key="k">
+				<form id="form{$i.id}" action="__URL__/doEdit?id={$i.id}" method="post">
+					<table cellpadding=3 style="float:left;">
+						<tr>
+							<th>标题</th>
+							<th><input class="easyui-textbox" maxlength=20 style="width: 300px"
+								name="name" value="{$i.name}" /></th>
+						</tr>
+						<tr>
+							<th>类型</th>
+							<th>{$i.type_name}</th>
+						</tr>
+						<tr>
+							<th>原价</th>
+							<th><input class="easyui-textbox" maxlength=20
+								name="old_price" value="{$i.old_price}" />元</th>
+						</tr>
+						<tr>
+							<th>优惠价</th>
+							<th><input class="easyui-textbox" maxlength=20
+								name="price" value="{$i.price}" />元</th>
+						</tr>
+						<tr>
+							<th valign="top">描述</th>
+							<th><input class="easyui-textbox" maxlength=20 style="width: 300px"
+								name="descs" value="{$i.descs}" /></th>
+						</tr>
+						<tr>
+						<td colspan="2" align="center"><a href="#" onclick="$('#form{$i.id}').submit();"
+							class="easyui-linkbutton" data-options="iconCls:'icon-ok'"
+							style="width: 80px">保存</a></td>
+					</tr>
+					</table>
+				</form>
+			</foreach>
+
+	</div>
+</div>
+<br/>
+<div class="easyui-tabs" style="">
+	<div title="UI设计师" style="padding: 10px">
+		<foreach name="uiMajors" item="i" key="k">
+				<form id="form{$i.id}" action="__URL__/doEdit?id={$i.id}" method="post">
+					<table cellpadding=3 style="float:left;">
+						<tr>
+							<th>标题</th>
+							<th><input class="easyui-textbox" maxlength=20 style="width: 300px"
+								name="name" value="{$i.name}" /></th>
+						</tr>
+						<tr>
+							<th>类型</th>
+							<th>{$i.type_name}</th>
+						</tr>
+						<tr>
+							<th>原价</th>
+							<th><input class="easyui-validatebox textbox" required="true" validType="length[0,6]"
+								name="old_price" value="{$i.old_price}" type="text" />元</th>
+						</tr>
+						<tr>
+							<th>优惠价</th>
+							<th><input class="easyui-validatebox textbox" required="true" validType="length[0,6]" 
+								name="price" value="{$i.price}" />元</th>
+						</tr>
+						<tr>
+							<th valign="top">描述</th>
+							<th><input class="easyui-textbox" style="width: 300px" 
+								name="descs" value="{$i.descs}" /></th>
+						</tr>
+						<tr>
+						<td colspan="2" align="center"><a href="#" onclick="$('#form{$i.id}').submit();"
+							class="easyui-linkbutton" data-options="iconCls:'icon-ok'"
+							style="width: 80px">保存</a></td>
+					</tr>
+					</table>
+				</form>
+			</foreach>
+
+	</div>
+</div>
+</block>

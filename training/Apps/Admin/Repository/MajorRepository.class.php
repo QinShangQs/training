@@ -20,4 +20,16 @@ class MajorRepository extends BaseRepository {
 		}
 		return $data = $this->_repository->where ( $conditions )->select ();
 	}
+	public function save($id, $name, $descs, $old_price, $price) {
+		$instance = new \stdClass ();
+		$instance->id = $id;
+		$instance->name = $name;
+		$instance->descs = $descs;
+		$instance->old_price= $old_price;
+		$instance->price = $price;		
+		return $this->_repository->data ( $instance )->save ();
+	}
+	public function remove($id) {
+		return $this->_repository->delete ( $id );
+	}
 }
