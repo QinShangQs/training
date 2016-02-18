@@ -1,0 +1,89 @@
+<extend name="./template" />
+
+<block name="content">
+<div class="easyui-tabs" style="">
+	<div title="产品经理" style="padding: 10px">
+		
+			<foreach name="productTeachers" item="i" key="k">
+				<form id="form{$i.id}" action="__URL__/doEdit?id={$i.id}" method="post">
+					<table cellpadding=3 style="float:left;">
+						<tr>
+							<th></th>
+							<td align=center>	
+								<empty name="i.header_image"> <img
+									src="__PUBLIC__/kecheng/images/friends.png" class="fl"> <else />
+								<img src="__ROOT__/{$i.header_image}" class="fl" width="138" height="138" > </empty>
+							</td>
+						</tr>
+						<tr>
+							<th>姓名</th>
+							<th><input class="easyui-textbox" maxlength=20 style="width: 150px"
+								name="name" value="{$i.name}" /></th>
+						</tr>
+
+						<tr>
+							<th>来自</th>
+							<th><input class="easyui-textbox" maxlength=20 style="width: 150px"
+								name="come" value="{$i.come}" /></th>
+						</tr>
+						<tr>
+							<th>级别</th>
+							<th><input class="easyui-textbox" maxlength=20 style="width: 150px"
+								name="degree" value="{$i.degree}" /></th>
+						</tr>
+
+						<tr>
+						<td colspan="2" align="center"><a href="#" onclick="$('#form{$i.id}').submit();"
+							class="easyui-linkbutton" data-options="iconCls:'icon-ok'"
+							style="width: 80px">保存</a></td>
+					</tr>
+					</table>
+				</form>
+			</foreach>
+
+
+	</div>
+</div>
+<br/>
+<div class="easyui-tabs" style="">
+	<div title="UI设计师" style="padding: 10px">
+		<foreach name="uiTeachers" item="i" key="k">
+				<form id="form{$i.id}" action="__URL__/doEdit?id={$i.id}" method="post">
+					<table cellpadding=3 style="float:left;">
+						<tr>
+							<th></th>
+							<td align=center>	
+								<empty name="i.header_image"> <img
+									src="__PUBLIC__/kecheng/images/friends.png" class="fl"> <else />
+								<img src="__ROOT__/{$i.header_image}" class="fl" width="138" height="138" > </empty>
+							</td>
+						</tr>
+						<tr>
+							<th>姓名</th>
+							<th><input class="easyui-textbox" maxlength=20 style="width: 150px"
+								name="name" value="{$i.name}" /></th>
+						</tr>
+
+						<tr>
+							<th>来自</th>
+							<th><input class="easyui-textbox" maxlength=20 style="width: 150px"
+								name="come" value="{$i.come}" /></th>
+						</tr>
+						<tr>
+							<th>级别</th>
+							<th><input class="easyui-textbox" maxlength=20 style="width: 150px"
+								name="degree" value="{$i.degree}" /></th>
+						</tr>
+
+						<tr>
+						<td colspan="2" align="center"><a href="#" onclick="$('#form{$i.id}').submit();"
+							class="easyui-linkbutton" data-options="iconCls:'icon-ok'"
+							style="width: 80px">保存</a></td>
+					</tr>
+					</table>
+				</form>
+			</foreach>
+
+	</div>
+</div>
+</block>
