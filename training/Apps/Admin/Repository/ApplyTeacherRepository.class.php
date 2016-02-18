@@ -38,4 +38,31 @@ class ApplyTeacherRepository extends BaseRepository {
 		}
 		return $data = $this->_repository->where ( $conditions )->select ();
 	}
+	
+	public function page($key = null, $profileId = 0, $rows = 25, $page = 1, $order = 'add_time desc') {
+		$conditions = array ();
+		if (is_numeric ( $profileId ) && $profileId > 0) {
+			$conditions ['profile_id'] = array (
+					'eq',
+					$profileId
+			);
+		}
+
+		if(!empty($key)){
+			$conditions['_string'] = ' (name like "%'.$key.'%")  OR ( mobile like "%'.$key.'%") OR (tencent like "%'.$key.'%") ';
+		}
+	
+		$startRow = $rows * ($page - 1);
+		$count = $this->_repository->where ( $conditions )->count ();
+		$data = $this->_repository->where ( $conditions )->order ( $order )->limit ( $startRow, $rows )->select ();
+		if (empty ( $data ))
+			$data = array ();
+		$data = parent::format($data);
+		$result = array (
+				'total' => $count,
+				'rows' => $data
+		);
+	
+		return $result;
+	}
 }

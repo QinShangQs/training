@@ -20,8 +20,8 @@
 </style>
 </head>
 <body>
-    <h1>{$username}</h1>
-    <p>欢迎您登录酷壳助手管理后台 <a href="{:U('Index/logout')}"	style="text-decoration: none">退出</a></p>
+    
+    <p><b style="font-size:25px">{$username}</b>&nbsp;&nbsp;&nbsp;&nbsp;欢迎您登录管理后台 <a href="{:U('Index/logout')}"	style="text-decoration: none">退出</a></p>
     
     <div class="easyui-panel" style="padding:5px;">
         <a href="#" onclick="changeUrl(this,'{:U('Main/first')}')" class="easyui-linkbutton" data-options="plain:true">首页</a>
@@ -33,12 +33,12 @@
     	<div><a href="#" onclick="changeUrl(this,'{:U('Gallery/index')}')">轮播图</a></div>
     </div>
     <div id="mm2" style="width:100px;">
-        <div><a href="#" onclick="changeUrl(this,'{:U('Feedback/index')}')">课程大纲</a></div>
-        <div><a href="#" onclick="changeUrl(this,'{:U('Feedback/index')}')">课程列表</a></div>
+        <div><a href="#" onclick="changeUrl(this,'{:U('ProfileItem/index')}')">课程大纲</a></div>
+        <div><a href="#" onclick="changeUrl(this,'{:U('Lesson/index')}')">课程列表</a></div>
     </div>
     <div id="mm3" style="width:100px;">
-        <div><a href="#" onclick="changeUrl(this,'{:U('FirstGallery/index')}')">报名列表</a></div>
-        <div><a href="#" onclick="changeUrl(this,'{:U('FirstGallery/index')}')">讲师申请列表</a></div>
+        <div><a href="#" onclick="changeUrl(this,'{:U('LessonRegister/index')}')">报名列表</a></div>
+        <div><a href="#" onclick="changeUrl(this,'{:U('ApplyTeacher/index')}')">讲师申请列表</a></div>
     </div>
     
     <div style="margin:20px 0 10px 0;"></div>
