@@ -1,0 +1,66 @@
+<extend name="./template" />
+
+<block name="content">
+
+<form action="__URL__/doEdit" enctype="multipart/form-data"	method="post" id="form1">
+	<input type="hidden" name="id" value="{$inst.id}"/>
+	<input type="hidden" name="header_image" value="{$inst.header_image}" />
+	<table align='center' cellspacing="2" cellpadding="2">
+		<tr>
+				<th></th>
+				<td align=center><empty name="inst.header_image"> <img
+						src="__PUBLIC__/kecheng/images/friends.png" class="fl" width="69"
+						height="69"> <else /> <a target="_blank"
+						href="__ROOT__/{$inst.header_image}" title="点击看大图"> <img
+						src="__ROOT__/{$inst.header_image}" class="fl" width="69" height="69">
+					</a> </empty></td>
+			</tr>
+		<tr>
+			<td>头像：</td>
+			<td><input id="photo1" name="photo1" class="easyui-filebox"
+			 data-options="prompt:'选择图片138*138'" /></td>
+		</tr>
+		<tr>
+			<td>姓名：</td>
+			<td><input class="easyui-validatebox textbox" value="{$inst.name}" name="name" data-options="required:true"/></td>
+		</tr>
+		<tr>
+			<td>授课:</td>
+			<td>
+				<if condition="$inst.profile_id eq 1">
+					<input type="radio" name="profile_id" id="p1" value=1 checked>产品经理&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="radio" name="profile_id" id="p1" value=2>UI设计师
+				<else /> 
+					<input type="radio" name="profile_id" id="p1" value=1>产品经理&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="radio" name="profile_id" id="p1" value=2 checked>UI设计师
+				</if>
+
+			</td>
+		</tr>
+		<tr>
+			<td>来自：</td>
+			<td><input class="easyui-validatebox textbox" value="{$inst.come}" name="come" data-options="required:true"/></td>
+		</tr>
+		<tr>
+			<td>级别：</td>
+			<td><input class="easyui-validatebox textbox" value="{$inst.degree}" name="degree" data-options="required:true"/></td>
+		</tr>
+		<tr>
+			<td colspan=2 align=center>
+			<a	href="#" class="easyui-linkbutton" data-options="iconCls:'icon-edit'"
+			onclick="wg.edit()">保存</a></td>
+		</tr>
+	</table>
+</form>
+
+<script>
+	var wg = {
+		edit : function() {
+			if ($("#form1").form('validate')) {
+				document.getElementById("form1").submit();
+			}
+		}
+    }
+</script>
+
+</block>

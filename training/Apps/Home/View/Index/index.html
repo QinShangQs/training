@@ -1,25 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<title>课程</title>
-<meta name="keywords" content="">
-<meta name="description" content="">
-<link rel="stylesheet" href="__PUBLIC__/kecheng/css/reset.css">
-<link rel="stylesheet" href="__PUBLIC__/kecheng/css/common.css">
-<link rel="stylesheet" href="__PUBLIC__/kecheng/css/index.css">
-</head>
-<body>
-	<a id="class"></a>
-	<div class="wrap">
-		<div class="nav-box">
-			<div class="w1000">
-				<img src="" class="fl logo" /> <a
-					href="javascript:EV_modeAlert('envon')" class="fr enroll"></a>
-			</div>
-		</div>
-
+<extend name="./template" />
+<block name="title">北京快剑客科技有限公司  教育 培训 科技 项目经理 UI设计师</block>
+<block name="content">
 		<div class='container'>
 			<div class="submit-box">
 				<form action="" method="" onsubmit="return false">
@@ -233,78 +214,9 @@
 		</div>
 	</div>
 
-	<div class="footer">
-		<div class="line"></div>
-		<div class="inner">
-			<div class="cf">
-				<div class="fl left">
-					<p class="contact">联系我们</p>
-					<div class="method">
-						<span>QQ:8888</span> <span>QQ:8888</span> <span>QQ:8888</span>
-					</div>
-					<p class="about">关于我们</p>
-				</div>
-				<div class="qr-box fr">
-					<p>扫一扫 关注我们</p>
-					<img src="" />
-				</div>
-			</div>
-			<p class="copyright">版权所有：北京快剑客科技公司 All Right Reserved</p>
-		</div>
-	</div>
-	</div>
 
-	<!-- 下面这个div将会被弹出显示，其内容和样式自行编写 -->
-	<div id="envon"
-		style="width: 300px; height: 240px; background-color: #FFFFFF; border: 1px solid #000000; padding: 20px; overflow: hidden; display: none;">
-		<a href="javascript:EV_closeAlert()" style="float: right;">X</a>
+	
 
-		<form action="" method="" onsubmit="return false" style="">
-			<table align='center' cellspacing='10' cellpadding=10>
-				<tr>
-					<td colspan="2" align="center" style="font-size:18px;font-weight: bold;">
-							申请讲课
-						</td>
-				</tr>
-				<tr>
-					<td>姓名：</td>
-					<td><input id="t_name" type="text"
-						style="width: 194px; height: 18px; padding: 2px; font-size: 15px;"></td>
-				</tr>
-				<tr>
-					<td>讲授课程：</td>
-					<td><select id="t_profile_id"
-						style="width: 196px; height: 29px; font-size: 15px">
-							<option value="0">请选择...</option>
-							<option value="1">产品经理</option>
-							<option value="2">UI设计师</option>
-					</select></td>
-				</tr>
-				<tr>
-					<td>联系电话：</td>
-					<td><input id="t_mobile" type="text"
-						style="width: 194px; height: 18px; padding: 2px; font-size: 15px;"></td>
-				</tr>
-				<tr>
-					<td>QQ/微信：</td>
-					<td><input id="t_tencent" type="text"
-						style="width: 194px; height: 18px; padding: 2px; font-size: 15px;"></td>
-				</tr>
-				<tr>
-					<td colspan="2" align="center"><button id="t_submit"
-							class="submit-btn">提交报名</button></td>
-				</tr>
-			</table>
-
-		</form>
-
-	</div>
-
-	<script src="__PUBLIC__/kecheng/js/jquery.js"></script>
-	<script src="__PUBLIC__/common.js"></script>
-	<script src="__PUBLIC__/kecheng/js/win.js"></script>
-	<script src="__PUBLIC__/kecheng/js/jquery.easing.js"></script>
-	<script src="__PUBLIC__/kecheng/js/jquery.iosslider.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$("#pro").click(function() {
@@ -433,5 +345,4 @@
 					.addClass('selected');
 		}
 	</script>
-</body>
-</html>
+</block>

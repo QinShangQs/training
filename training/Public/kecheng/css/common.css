@@ -134,7 +134,7 @@
 .list-box{padding: 40px 0}
 .list-box .sub-title{font-size:2em;margin-bottom: 20px }
 .list-box.fir{border-bottom: 1px solid #D8D8D8}
-.list-box li{float: left;margin-right:52px;}
+.list-box li{float: left;margin:5px;}
 .list-box li.last{margin-right:0;}
 .list-box li img{width:138px;margin-right:20px;}
 .list-box li p{margin-bottom: 15px;font-size:1.3em;}

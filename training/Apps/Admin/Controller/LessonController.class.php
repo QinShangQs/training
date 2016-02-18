@@ -12,8 +12,7 @@ class LessonController extends Controller {
 		$this->_lessonRepository = new LessonRepository();
 	}
 	
-	public function index(){
-		$this->assign('galleries', $this->_galleryRepository->findAll());
+	public function index(){	
 		$this->display();
 	}
 }

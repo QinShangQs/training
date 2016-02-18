@@ -1,0 +1,50 @@
+<extend name="./template" />
+
+<block name="content">
+
+<form action="__URL__/create" enctype="multipart/form-data"	method="post" id="form1">
+	
+	<table align='center' cellspacing="2" cellpadding="2">
+		<tr>
+			<td>头像：</td>
+			<td><input id="photo1" name="photo1" class="easyui-filebox"
+			 data-options="prompt:'选择图片138*138'" /></td>
+		</tr>
+		<tr>
+			<td>姓名：</td>
+			<td><input class="easyui-validatebox textbox" name="name" data-options="required:true"/></td>
+		</tr>
+		<tr>
+			<td>授课:</td>
+			<td>
+				<input type="radio" name="profile_id" id="p1" value=1 checked>产品经理 &nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" name="profile_id" id="p1" value=2>UI设计师 &nbsp;&nbsp;&nbsp;&nbsp;
+			</td>
+		</tr>
+		<tr>
+			<td>来自：</td>
+			<td><input class="easyui-validatebox textbox" name="come" data-options="required:true"/></td>
+		</tr>
+		<tr>
+			<td>级别：</td>
+			<td><input class="easyui-validatebox textbox" name="degree" data-options="required:true"/></td>
+		</tr>
+		<tr>
+			<td colspan=2 align=center>
+			<a	href="#" class="easyui-linkbutton" data-options="iconCls:'icon-ok'"
+			onclick="wg.create()">提交</a></td>
+		</tr>
+	</table>
+</form>
+
+<script>
+	var wg = {
+		create : function() {
+			if ($("#form1").form('validate')) {
+				document.getElementById("form1").submit();
+			}
+		}
+    }
+</script>
+
+</block>
