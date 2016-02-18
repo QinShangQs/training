@@ -2,4 +2,100 @@
 
 <block name="content">
 
-</block>
+<div class="easyui-panel" title="轮播图列表"
+	style="padding: 2px; height: 220px;">
+	<foreach name="galleries" item="i">
+	<div id="g_{$i.id}" style="width: 150px; height: 130px; float: left; margin: 10px">
+		<a title="点击看大图" href="__ROOT__/{$i.image_url}" target="_blank"> <img
+			src="__ROOT__/{$i.image_url}" style="width: 100%; height: 100%" /></a>
+		<div style="text-align: center;">
+			<a href="#" class="easyui-linkbutton"
+				data-options="iconCls:'icon-edit', plain:true" onclick="wg.edit({$i.id},'__ROOT__/{$i.image_url}')"></a> <a href="#"
+				class="easyui-linkbutton"
+				data-options="iconCls:'icon-cancel', plain:true" onclick="wg.remove({$i.id})"></a>
+		</div>
+	</div>
+	</foreach>
+</div>
+<div id="edit_div" style="display:none;width:50%;">
+	<br/>
+	<div class="easyui-panel" title="编辑轮播图" style="padding: 5px;width:100%;">
+		<form action="__URL__/doEdit" enctype="multipart/form-data"
+			method="post" id="form2">
+			<img id="edit_img" src="" style="width: 150px; height: 130px;"/><br/>
+			<input type="hidden" id="edit_id" name="edit_id" value=0/>
+			<input id="photo2" name="photo2" class="easyui-filebox"
+				style="width: 300px" data-options="prompt:'选择图片'" /><br>
+				 <a	href="#" class="easyui-linkbutton" data-options="iconCls:'icon-edit'"
+				onclick="wg.doEdit()">保存</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a	href="#" class="easyui-linkbutton c1" 
+				onclick="wg.cancelEdit()">取消</a>
+				<br /> <span style="color: gray">提示：图片尺寸1200*468，小于1M</span>
+		</form>
+	</div>
+</div>
+<br />
+<div id="create_div" class="easyui-panel" title="新增轮播图" style="padding: 5px;">
+	<form action="__URL__/create" enctype="multipart/form-data"
+		method="post" id="form1">
+		<input id="photo1" name="photo1" class="easyui-filebox"
+			style="width: 300px" data-options="prompt:'选择图片'" />&nbsp; <a
+			href="#" class="easyui-linkbutton" data-options="iconCls:'icon-ok'"
+			onclick="wg.create()">提交</a><br /> <span style="color: gray">提示：图片尺寸1200*468，小于1M</span>
+	</form>
+</div>
+
+
+<script type="text/javascript">
+	var wg = {
+		create : function() {
+			if (!$('#photo1').filebox('getValue')) {
+				$.messager.alert('提示', '请选择图片', 'warning');
+				return;
+			}
+
+			document.getElementById("form1").submit();
+		},
+		remove : function(id) {
+			$.messager.confirm('确认', '删除后不可恢复，您确定要删除该记录吗？', function(r) {
+				if (!r)
+					return;
+				$.getJSON('__URL__/delete', {
+					id : id,
+					r : Math.random()
+				}, function(data) {
+					if (data.success) {
+						$.messager.alert('提示', data.message, 'info',
+								function() {
+									location.reload();
+								});
+					} else {
+						$.messager.alert('提示', data.message, 'error');
+					}
+				});
+			});
+		},
+		edit:function(id,img){
+			$("#edit_id").val(id);
+			$("#edit_img").attr('src',img);
+			$("#edit_div").show();
+		},
+		cancelEdit:function(){
+			$("#edit_id").val(0);
+			$("#edit_img").attr('src','');
+			$("#edit_div").hide();
+		},
+		doEdit:function(){
+			if (!$('#photo2').filebox('getValue')) {
+				$.messager.alert('提示', '请选择新的轮播图片!', 'warning');
+				return;
+			}			
+			$.messager.confirm('确认', '您确定要保存修改吗？', function(r) {
+				if (!r)
+					return;
+				document.getElementById("form2").submit();
+			});
+		}
+
+	}
+</script> </block>

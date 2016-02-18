@@ -1,5 +1,58 @@
 <extend name="./template" />
 
 <block name="content">
+<div class="easyui-tabs" style="">
+	<div title="产品经理" style="padding: 10px">
+		<form id="form1" action="__URL__/doEdit?p=1" method="post">
+			<foreach name="productItems" item="i" key="k">
+			<table cellpadding=3 style="float:left;">
+				<tr>
+					<th>标题</th>
+					<th><input class="easyui-textbox" maxlength=20 style="width: 300px"
+						name="{$i.id}_title" value="{$i.title}" /></th>
+				</tr>
+				<tr>
+					<th valign="top">描述</th>
+					<th><textarea cols="40" rows="5" name="{$i.id}_content">{$i.content}</textarea></th>
+				</tr>
+		
+			</table>
+			</foreach>
+			<table cellpadding=3 align=center style="width: 100%">
+				<tr>
+					<td colspan="2" align="center"><a href="#" onclick="$('#form1').submit();"
+						class="easyui-linkbutton" data-options="iconCls:'icon-ok'"
+						style="width: 80px">保存</a></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>
+<div class="easyui-tabs" style="">
+	<div title="UI设计师" style="padding: 10px">
+		<form id="form2" action="__URL__/doEdit?p=2" method="post">
+			<foreach name="uiItems" item="i" key="k">
+			<table cellpadding=3 style="float:left;">
+				<tr>
+					<th>标题</th>
+					<th><input class="easyui-textbox" maxlength=20 style="width: 300px"
+						name="{$i.id}_title" value="{$i.title}" /></th>
+				</tr>
+				<tr>
+					<th valign="top">描述</th>
+					<th><textarea cols="40" rows="5" name="{$i.id}_content">{$i.content}</textarea></th>
+				</tr>
 
+			</table>
+			</foreach>
+			<table cellpadding=3 align=center style="width: 100%">
+				<tr>
+					<td colspan="2" align="center"><a href="#" onclick="$('#form2').submit();"
+						class="easyui-linkbutton" data-options="iconCls:'icon-ok'"
+						style="width: 80px">保存</a></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>
 </block>
