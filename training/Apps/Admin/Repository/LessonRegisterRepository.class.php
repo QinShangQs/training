@@ -74,6 +74,15 @@ class LessonRegisterRepository extends BaseRepository {
 		return $result;
 	}
 	
+	public function countByProperty($propertyName, $value){
+		$conditions [$propertyName] = array (
+				'eq',
+				$value
+		);
+		
+		return $this->_repository->where ( $conditions )->count ();
+	}
+	
 	private static function formater($datas, $single = false){
 		$lessonRepository = new LessonRepository();
 		$lessons = $lessonRepository->findAll();

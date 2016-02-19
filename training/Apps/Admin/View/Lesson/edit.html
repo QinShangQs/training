@@ -1,0 +1,66 @@
+<extend name="./template" />
+
+<block name="content">
+
+<form action="__URL__/doEdit" enctype="multipart/form-data"	method="post" id="form1">
+	<input type="hidden" name="id" value="{$inst.id}"/>
+	<table align='center' cellspacing="2" cellpadding="2">
+		<tr>
+			<td>名称：</td>
+			<td><input class="easyui-validatebox textbox" value="{$inst.name}" name="name" data-options="required:true"/></td>
+		</tr>
+		<tr>
+			<td>大纲:</td>
+			<td>
+				<if condition="$inst.profile_id eq 1">
+					<input type="radio" name="profile_id" id="p1" value=1 checked>产品经理&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="radio" name="profile_id" id="p1" value=2>UI设计师
+				<else /> 
+					<input type="radio" name="profile_id" id="p1" value=1>产品经理&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="radio" name="profile_id" id="p1" value=2 checked>UI设计师
+				</if>
+			</td>
+		</tr>
+		<tr>
+			<td>开课时间：</td>
+			<td><input class="easyui-validatebox textbox" value="{$inst.open_date}" name="open_date" data-options="required:true"/></td>
+		</tr>
+		<tr>
+			<td>已报名：</td>
+			<td>{$inst.peoples} 人</td>
+		</tr>
+		<tr>
+			<td>状态：</td>
+			<td>
+				<if condition="$inst.state eq '报名中'">
+					<input type="radio" name="state"  value='报名中' checked>报名中&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="radio" name="state"  value='已爆满'>已爆满
+				<else /> 
+					<input type="radio" name="state"  value='报名中'>报名中&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="radio" name="state"  value='已爆满' checked>已爆满
+				</if>
+			</td>
+		</tr>
+		<tr>
+			<td>创建时间：</td>
+			<td>{$inst.add_time} 人</td>
+		</tr>
+		<tr>
+			<td colspan=2 align=center>
+			<a	href="#" class="easyui-linkbutton" data-options="iconCls:'icon-edit'"
+			onclick="wg.edit()">保存</a></td>
+		</tr>
+	</table>
+</form>
+
+<script>
+	var wg = {
+		edit : function() {
+			if ($("#form1").form('validate')) {
+				document.getElementById("form1").submit();
+			}
+		}
+    }
+</script>
+
+</block>

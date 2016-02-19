@@ -27,7 +27,7 @@ class BaseRepository {
 	 }
 	 
 	 
-	 public static function format($datas, $single=false){
+	 protected static function format($datas, $single=false){
 	 	if($single){
 	 		if(array_key_exists('profile_id', $datas)){
 	 			$datas['profile'] = static::getProfileName($datas['profile_id']);
