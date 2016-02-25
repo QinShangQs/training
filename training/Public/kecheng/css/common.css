@@ -1,3 +1,8 @@
+a:link{color:black}
+a:hover{color:black}
+a:visited{color:black}
+a:active{color:black}
+
 .container {
 	/* defaults for resposive height container */
 	position: relative;
@@ -114,8 +119,8 @@
 
 .course-box{width:1000px;margin:20px auto;}
 .course-box .title{width:313px;height:59px;background: url(../images/kecheng_intro.png) 0 0 no-repeat;margin-left: 20px;margin-bottom:34px;margin-top:65px;}
-.course-box .course-wrap{width:468px;}
-.course-box .course{position:relative;width:468px;height:216px;background: #535353;border:3px solid #FFF;box-shadow: 2px 2px 3px #C1C1C1;}
+.course-box .course-wrap{width:298px;}
+.course-box .course{position:relative;width:298px;height:216px;background: #535353;border:3px solid #FFF;box-shadow: 2px 2px 3px #C1C1C1;}
 .course-box .course-wrap.mr{margin-right:52px;}
 .course-title{color:#FFF;font-size:2em;}
 .course-box .popup{width:223px;height: 88px;margin:68px auto;}
@@ -148,14 +153,14 @@
 .kaike-box thead tr th:last-child{border:0;}
 .kaike-box table tbody tr td{width:33.33%;vertical-align: middle;height: 45px;line-height: 45px;text-align: center;font-size: 1.2em}
 .kaike-box table tbody tr td a{padding:7px 20px;color:#FFF;text-align: center;border-radius: 5px;background: rgb(5,205,80);}
-.outline-box{width: 1000px;margin:20px auto 80px;}
+.outline-box{width: 1000px;margin:20px auto 20px;}
 .outline-box .tab{width:558px;height:64px;margin:20px auto;}
 .outline-box .tab p{width:50%;height:64px;line-height:64px;text-align: center;background: #ddd;font-size: 2em;-webkit-box-shadow:1px 1px 3px #BFBFBF inset;           
     box-shadow:1px 1px 3px #BFBFBF inset;; }
 .outline-box .tab p.active{background: rgb(255,127,13);color:#FFF;box-shadow: none;}
 .outline-box .notice{text-align: center;color: #bbb;margin-bottom: 20px;font-size: 1.3em}
 .outline-box .cf{background: #FFF}
-.outline-box ul{width: 495px;min-height:50px;background: #ddd;margin-bottom: 10px }
+.outline-box ul{width: 495px;height:200px;background: #ddd;margin-bottom: 10px }
 .outline-box ul:nth-child(odd){margin-right:10px}
 .outline-box ul li{margin:0px 0 10px 5px;font-size: 1.3em }
 .outline-box ul li.title{font-size: 1.4em;margin-top:10px;}
@@ -167,6 +172,7 @@
 .footer .contact{margin-bottom: 20px;}
 .footer .method span{margin-right: 30px}
 .footer .about{margin: 50px 0 20px 0;color:rgb(255,127,13);}
+.footer .about a{margin: 50px 0 20px 0;color:rgb(255,127,13);}
 .footer .copyright{text-align: center;font-size: 14px;color:#bbb;}
 .qq-box{width:200px;position: fixed;right:0;top:20%;z-index: 999}
 .qq-box .qq{width: 100%;height: 174px;background: url(../images/qq1.png) 0 0 no-repeat;}

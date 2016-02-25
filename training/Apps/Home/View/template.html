@@ -35,7 +35,9 @@
 						<div class="method">
 							<span>QQ:8888</span> <span>QQ:8888</span> <span>QQ:8888</span>
 						</div>
-						<p class="about"><a href="__URL__/about.html">关于我们</a></p>
+						<p class="about">
+							<a href="__URL__/about.html" target="_blank">关于我们</a>
+						</p>
 					</div>
 					<div class="qr-box fr">
 						<p>扫一扫 关注我们</p>
@@ -46,7 +48,7 @@
 			</div>
 		</div>
 	</div>
-<!-- 下面这个div将会被弹出显示，其内容和样式自行编写 -->
+	<!-- 下面这个div将会被弹出显示，其内容和样式自行编写 -->
 	<div id="envon"
 		style="width: 300px; height: 240px; background-color: #FFFFFF; border: 1px solid #000000; padding: 20px; overflow: hidden; display: none;">
 		<a href="javascript:EV_closeAlert()" style="float: right;">X</a>
@@ -54,9 +56,8 @@
 		<form action="" method="" onsubmit="return false" style="">
 			<table align='center' cellspacing='10' cellpadding=10>
 				<tr>
-					<td colspan="2" align="center" style="font-size:18px;font-weight: bold;">
-							申请讲课
-						</td>
+					<td colspan="2" align="center"
+						style="font-size: 18px; font-weight: bold;">申请讲课</td>
 				</tr>
 				<tr>
 					<td>姓名：</td>
@@ -89,8 +90,59 @@
 			</table>
 
 		</form>
-
 	</div>
+
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#t_submit").click(function() {
+				var name = $.trim($("#t_name").val());
+				var profile_id = $.trim($("#t_profile_id").val());
+				var mobile = $.trim($("#t_mobile").val());
+				var tencent = $.trim($("#t_tencent").val());
+
+				var err = '';
+				if (Utils.isEmpty(name)) {
+					err += '请填写姓名！' + "\n";
+				}
+				if (profile_id == 0) {
+					err += '请选择讲授课程！' + "\n";
+				}
+				if (Utils.isEmpty(mobile)) {
+					err += '请填写联系方式！' + "\n";
+				} else if (!Utils.isTel(mobile)) {
+					err += '请正确填写联系方式！' + "\n";
+				}
+				if (Utils.isEmpty(tencent)) {
+					err += '请填写QQ或微信！' + "\n";
+				}
+
+				if (err) {
+					alert(err);
+					return;
+				}
+
+				$.getJSON('__URL__/applyRegister', {
+					name : name,
+					profile_id : profile_id,
+					mobile : mobile,
+					tencent : tencent,
+					r : Math.random()
+				}, function(obj) {
+					if (obj.success) {
+						$("#t_name").val('');
+						$("#t_profile_id").val(0);
+						$("#t_mobile").val('');
+						$("#t_tencent").val('');
+						EV_closeAlert();
+					}
+					alert(obj.message);
+				});
+			});
+
+		});
+	</script>
 
 </body>
 </html>

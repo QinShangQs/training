@@ -56,8 +56,10 @@ class IndexController extends Controller {
 		if (! empty ( $old )) {
 			$this->ajaxReturn(static::result ( false, '您已经报名过了！' )) ;
 		}
-		$lesson = $this->_lessonRepository->getById ( $lesson_id );
-		$suc = $this->_lessonRegisterRepository->add ( $name, $mobile, $tencent, $lesson_id, $lesson ['profile_id'] );
+		//$lesson = $this->_lessonRepository->getById ( $lesson_id );
+		//$suc = $this->_lessonRegisterRepository->add ( $name, $mobile, $tencent, $lesson_id, $lesson ['profile_id'] );
+		
+		$suc = $this->_lessonRegisterRepository->add ( $name, $mobile, $tencent, $lesson_id, $lesson_id );
 		if (! empty ( $suc )) {
 			$this->ajaxReturn(static::result ( true, '恭喜您，报名成功！' ));
 		} else {
