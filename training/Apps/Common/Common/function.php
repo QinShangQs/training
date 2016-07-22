@@ -16,6 +16,7 @@ function upload($file, $maxSize = 3145728, $exts = array(), $rootPath = '', $ran
 	$upload = new \Think\Upload ();
 	$upload->maxSize = $maxSize;
 	if (! $randomSaveName){
+		$saveName = iconv('utf-8','gbk',$saveName);
 		$upload->saveName = $saveName;
 	}
 	$upload->exts = $exts;
@@ -28,6 +29,7 @@ function upload($file, $maxSize = 3145728, $exts = array(), $rootPath = '', $ran
 		$res->message = $upload->getError ();
 		$res->filePath = "";
 	} else {
+		$info ['savename'] = iconv('gbk','utf-8',$info ['savename']);
 		$res->success = true;
 		$res->message = "上传成功";
 		$res->filePath = str_replace("./", "", $rootPath) . $info ['savepath'] . $info ['savename'];

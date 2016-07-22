@@ -13,13 +13,15 @@ return array(
 		'MODULE_ALLOW_LIST' => array (
 				'Home',
 				'Admin',
+				'Photos'
 		),
 		'DEFAULT_MODULE' => 'Home', // 默认模块
 		'URL_MODEL' => 1, // URL模式
 		'URL_CASE_INSENSITIVE'=>true,
 		
 		//自定义配置项
-		'IMAGE_PATH' => './Uploads/'
+		'IMAGE_PATH' => './Uploads/',
+		'PHOTOS_IMAGE_PATH' => './Uploads/photos/'
 );
 
 // return array(

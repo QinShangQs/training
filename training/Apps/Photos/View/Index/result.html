@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>上传结果</title>
+<meta content="width=device-width,user-scalable=no" name="viewport">
+<meta name="viewport"
+	content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<link href="__PUBLIC__/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<style type="text/css">
+	body{
+		margin:auto;
+		padding:1rem;
+		padding-top:5vh;
+		font-family: '微软雅黑'
+	}
+</style>
+</head>
+<body>
+<php>if($inst['success']){</php>
+	<div class="alert alert-success">{$inst.message} ({$inst.savename})</div>
+	<div style="margin:auto;padding-bottom: 1rem;">
+		<img style="display:block;width:50%;margin: auto; " src="<php>$_SERVER['HTTP_HOST']</php>__ROOT__/{$inst.filePath}"  class="img-thumbnail" >
+	</div>
+	<php>$_SERVER['HTTP_HOST']</php>__ROOT__/{$inst.filePath}
+	<button type="button" class="btn btn-primary" style="width:100%" onclick='location.href="__URL__/index"'>再来一张</button>
+<php>}else{</php>
+	<div class="alert alert-danger">{$inst['message']}</div>
+	<button type="button" class="btn btn-default" style="width:100%" onclick='location.href="__URL__/index"'>重新上传</button>
+<php>}</php>
+
+
+</body>
+</html>
