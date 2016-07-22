@@ -24,7 +24,6 @@ body {
 }
 </style>
 <body>
-	<h2>管理</h2>
 	<p style="margin-bottom: 0.2rem;">
 		<input id='key' class="easyui-textbox"
 			data-options="buttonText:'搜索',buttonIcon:'icon-search',prompt:'图片名称',onClickButton:function(){wg.search();}"
@@ -40,15 +39,15 @@ body {
 		<thead>
 			<tr>
 				<th field="ck" checkbox="true"></th>  
-				<th data-options="field:'img_path',width:'20%'" formatter="wg.logoFormatter">预览图</th>
 				<th data-options="field:'id'">ID</th>
+				<th data-options="field:'img_path',width:'20%'" formatter="wg.logoFormatter">预览图</th>				
 				<th data-options="field:'img_name'" formatter="wg.nameFormatter">图片名称</th>
 				<th data-options="field:'download_url',hidden:true">下载地址</th>
-				<th data-options="field:'add_time'">上传时间</th>
+				<th data-options="field:'add_time'" formatter="wg.dateFormatter">上传时间</th>
 			</tr>
 		</thead>
 	</table>
-	<div id="toolbar">
+	<div id="toolbar" style="text-align:right">
 		<a href="javascript:wg.removes()" class="easyui-linkbutton" iconcls="icon-clear" plain="true">删除</a> 
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<a href="{:U('index')}" class="easyui-linkbutton" iconcls="icon-add" plain="true">新增</a> 
@@ -75,7 +74,7 @@ body {
 				rownumbers : false,
 				pageSize : 20,
 				pageList : [ 20, 40, 50 ],
-				height:$(window).height()*0.63
+				height:$(window).height()*0.72
 			});
 		},
 		search : function() {
@@ -92,6 +91,36 @@ body {
 				location.href = "/kuke/L6gtabfw/Topic/edit/topic_id/" + row.topic_id;
 			}
 		},
+		removes:function(){
+			var selRows = $('#tt').datagrid('getSelections')  
+	        if (selRows.length == 0) {  
+	            $.messager.alert("提示", "请选择要删除的行！", "info");  
+	            return;  
+	        }
+			
+			var imgPaths = ""; 
+			var names = "";
+			var ids = "";  
+            //批量获取选中行的评估模板ID  
+            for (i = 0; i < selRows.length;i++) {  
+            	ids = (ids == "" ?  selRows[i].id : (selRows[i].id + "," + ids));   
+            	names = (names == "" ?  selRows[i].img_name : (selRows[i].img_name + "," + names));
+            	imgPaths = (imgPaths == "" ?  selRows[i].img_path : (selRows[i].img_path + "," + imgPaths));   
+            }  
+            
+            $.messager.confirm("确认","确定要删除选中记录吗？",function(r){
+            	if(!r) return;
+            	$.post('__URL__/removes',{ids:ids, imgPaths:imgPaths},function(obj){
+            		if(obj.success){
+            			$.messager.alert('提示', '删除成功！');
+                        $("#tt").datagrid("reload");
+            		}else{
+            			$.messager.alert('提示', '删除失败，请联系管理员！', 'warning');
+            		}
+            	},'json');
+            });
+			
+		},
 		logoFormatter : function(value, row, index) {
 			if (value) {
 				return "<a href='"+row.download_url+"'><img src='__ROOT__/"+value+"' width='100%' valign='middle' /></a>";
@@ -101,6 +130,12 @@ body {
 		nameFormatter : function(value, row, index) {
 			if (value) {
 				return "<a href='__URL__/detail?id="+row.id+"'>"+value+"</a>";
+			}
+			return "";
+		},
+		dateFormatter:function(value,row,index){
+			if (value) {
+				return value.substr(5);
 			}
 			return "";
 		}

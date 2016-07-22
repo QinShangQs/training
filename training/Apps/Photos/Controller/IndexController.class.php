@@ -26,7 +26,7 @@ class IndexController extends Controller {
 		$this->display();
 	}
 	
-	public function uploadx($name) {
+	public function uploadx($name='') {
 		$name = trim($name);
 		$uploadConfig = array (
 				$_FILES ['photo'],
@@ -73,4 +73,15 @@ class IndexController extends Controller {
 		$this->ajaxReturn($result);
 	}
 	
+	public function removes($ids,$imgPaths){ 
+		$c = $this->_service->remove($ids);
+		if($c > 0){
+			$imgs = explode(',', $imgPaths);
+			foreach ($imgs as $key=>$val){
+				@unlink('./'.$val);
+			}
+		}
+		
+		$this->ajaxReturn(array('success'=> $c > 0));
+	}
 }
