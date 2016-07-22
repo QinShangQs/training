@@ -20,15 +20,23 @@
 <php>if($inst['success']){</php>
 	<div class="alert alert-success">{$inst.message} ({$inst.savename})</div>
 	<div style="margin:auto;padding-bottom: 1rem;">
-		<img style="display:block;width:50%;margin: auto; " src="<php>$_SERVER['HTTP_HOST']</php>__ROOT__/{$inst.filePath}"  class="img-thumbnail" >
+		<img style="display:block;width:50%;margin: auto; " src="__ROOT__/{$inst.filePath}"  class="img-thumbnail" >
 	</div>
-	<php>$_SERVER['HTTP_HOST']</php>__ROOT__/{$inst.filePath}
-	<button type="button" class="btn btn-primary" style="width:100%" onclick='location.href="__URL__/index"'>再来一张</button>
+	<table style="width:100%">
+		<tr>
+			<td width="50%"><button type="button" class="btn btn-primary" style="width:100%" onclick='location.href="__URL__/index"'>再来一张</button></td>
+			<td width="50%"><button type="button" class="btn btn-info" style="width:100%" onclick='location.href="__URL__/detail?id={$inst.newId}"'>查看二维码</button></td>
+		</tr>
+	</table>
+	
 <php>}else{</php>
 	<div class="alert alert-danger">{$inst['message']}</div>
 	<button type="button" class="btn btn-default" style="width:100%" onclick='location.href="__URL__/index"'>重新上传</button>
 <php>}</php>
 
+<script type="text/javascript">
+	console.log("__ROOT__/{$inst.filePath}");
+</script>
 
 </body>
 </html>
